@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Social Fitness</title>
+</head>
+<body>
+
+{% extends "social/base.html" %}
+
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Social Feed</h2>
+  
+{% if posts %}
+    {% for post in posts %}
+      <div style="margin-bottom: 20px;">
+        
+        <img 
+          src="{{ post.image.url }}" 
+          alt="Post image" 
+          style="max-width: 300px;"
+        >
+
+{% if post.caption %}
+<p>{{ post.caption }}</p>
+{% endif %}
+
+<small>Posted by {{ post.user }} on {{ post.created_at }}</small>
+</div>
+{% endfor %}
+{% else %}
+<p>No posts yet.</p>
+{% endif %}
+
+
+
+{% endblock %}
+
+</body>
+</html>

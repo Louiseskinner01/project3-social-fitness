@@ -1,8 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Post
 # Create your views here.
 
 
 def home(request):
+ posts = Post.objects.all().order_by("-created_at")
+ return render(request, "social/index.html",  {"posts": posts})
 
-    return HttpResponse("Social Fitness by Louise Skinner")
+def post(request):
+ posts = Post.objects.all().order_by("-created_at")
+ return render(request, "social/create_post.html",  {"posts": posts})
