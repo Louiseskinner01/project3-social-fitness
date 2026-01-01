@@ -1,0 +1,53 @@
+[
+    {
+      "model": "social.post",
+      "pk": 1999,
+      "fields": {
+        "user": 1,
+        "image": "posts/sample1.jpg",
+        "caption": "First test post — feeling strong today 💪",
+        "created_at": "2025-12-29T10:15:00Z"
+      }
+    },
+    {
+      "model": "social.post",
+      "pk": 2999,
+      "fields": {
+        "user": 1,
+        "image": "posts/sample2.jpg",
+        "caption": "Quick lunchtime workout ✅",
+        "created_at": "2025-12-29T13:05:00Z"
+      }
+    },
+    {
+      "model": "social.post",
+      "pk": 3999,
+      "fields": {
+        "user": 1,
+        "image": "posts/sample3.jpg",
+        "caption": "",
+        "created_at": "2025-12-30T08:40:00Z"
+      }
+    },
+    {
+      "model": "social.post",
+      "pk": 4999,
+      "fields": {
+        "user": 1,
+        "image": "posts/sample4.jpg",
+        "caption": "Mobility + stretch session 🧘",
+        "created_at": "2025-12-30T12:20:00Z"
+      }
+    },
+    {
+        "model": "social.post",
+        "pk": 5999,
+        "fields": {
+          "user": 1,
+          "image": "posts/sample4.jpg",
+          "caption": "Mobility + stretch session part 2 🧘",
+          "created_at": "2025-12-30T12:20:00Z"
+        }
+      }
+  ]
+  

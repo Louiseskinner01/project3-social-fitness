@@ -10,6 +10,7 @@
     <h1>Social Fitness</h1>
     <nav>
       <a href="{% url 'home' %}">Home</a>
+      
     
     </nav>
     <hr>
@@ -17,6 +18,12 @@
 
   <main>
     {% block content %}{% endblock %}
+
+    
+      {% block copyright %}
+          Made by Code Instituters
+      {% endblock copyright %}
+  
   </main>
 </body>
 </html>
