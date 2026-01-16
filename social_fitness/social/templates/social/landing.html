@@ -2,8 +2,18 @@
 
 {% block content %}
   <h1>Social Fitness</h1>
-  <p>Log in or create an account.</p>
 
-  <a href="{% url 'account_login' %}">Log in</a>
+
+  {% if user.is_authenticated %}
+  <p>testing</p>
+{% else %}
+
+<p>Log in or create an account.</p>
+  <a href="{% url 'account_signup' %}">Sign Up</a>
+  <a href="{% url 'account_login' %}">Login</a>
+{% endif %}
+  
+
+  
 
 {% endblock %}
