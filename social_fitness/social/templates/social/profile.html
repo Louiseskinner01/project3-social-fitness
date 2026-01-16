@@ -23,5 +23,7 @@
     {% endfor %}
   {% else %}
     <p>You haven’t posted anything yet.</p>
+    <a href="{% url 'create_post' %}">Create Post</a>
+
   {% endif %}
 {% endblock %}

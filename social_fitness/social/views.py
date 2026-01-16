@@ -23,7 +23,7 @@ class PostList(LoginRequiredMixin, ListView):
     context_object_name = "posts"            # template uses {{ posts }}
     ordering = ["-created_at"]               # displays "newest" first
     paginate_by = 6                          # display x number of posts per page
-    login_url = "login"                      # sends non-users to the login page
+    login_url = "account_login"                      # sends non-users to the login page
 
 
 @login_required

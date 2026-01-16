@@ -7,6 +7,6 @@ urlpatterns = [
     path("profile/", profile, name="profile"),
     path("posts/new/", create_post, name="create_post"),
     path("posts/<int:post_id>/delete/", delete_post, name="delete_post"),
-    path("signup/", signup, name="signup"),
+    
 ]
 

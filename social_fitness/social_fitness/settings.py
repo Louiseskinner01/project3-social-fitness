@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-7bbs@i96_dz##g6lm@p7+$p2k8v4h0uqx9z3&b$kr9p8je#08h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "social-fitness-330c9c90ea8f.herokuapp.com"]
 
 
 # Application definition
@@ -40,9 +40,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social',
-    'django_summernote'
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'django_summernote',
+    'social'
 ]
+
+# Authentication redirects
+SITE_ID = 1
+LOGIN_REDIRECT_URL = "/feed/"       # on login user is directed to feed
+LOGOUT_REDIRECT_URL = "/"           # after logout user is directed to the landing page
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -53,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'social_fitness.urls'
@@ -105,6 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -132,6 +143,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
-# Authentication redirects
-LOGIN_REDIRECT_URL = "/feed/"       # on login user is directed to feed
-LOGOUT_REDIRECT_URL = "/"           # after logout user is directed to the landing page
