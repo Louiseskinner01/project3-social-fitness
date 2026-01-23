@@ -15,48 +15,78 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand">
-          <img src="{% static 'social/images/logo.png' %}" href="{% url 'landing' %}" alt="Social Fitness" id="logo">
+    
+        <!-- Logo / Brand -->
+        <a class="navbar-brand" href="{% url 'landing' %}">
+          <img src="{% static 'social/images/logo.png' %}" alt="Social Fitness" id="logo">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    
+        <!-- Toggle button (mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+    
+        <!-- Collapsible content -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+          <!-- Left links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'landing' %}">Home</a>
+              <a class="nav-link" href="{% url 'landing' %}">Home</a>
             </li>
+    
             <li class="nav-item">
               <a class="nav-link" href="{% url 'feed' %}">Feed</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'profile' %}">Profile</a>
-            </li>
-            
+    
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+              </li>
+    
+              <!-- Only show on profile page -->
+              {% if request.resolver_match.url_name == "profile" %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'create_post' %}">Create Post</a>
+                </li>
+              {% endif %}
+            {% endif %}
           </ul>
-          
-          {% if user.is_authenticated %}
-          <form method="POST" action="{%  url 'account_logout' %}" class="logout-form">
-            {% csrf_token %}
-            <button type="submit" class="logout-btn">logout</button>
-          </form>
-        {% else %}
-      
-          <a href="{% url 'account_signup' %}">Login</a>
-        {% endif %}
-
-
-
+    
+          <!-- Right side -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <form method="POST" action="{% url 'account_logout' %}" class="d-inline">
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-link nav-link p-0">
+                    Logout
+                  </button>
+                </form>
+              </li>
+    
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
+              </li>
+            {% endif %}
+    
+          </ul>
+    
         </div>
       </div>
-    
-      
- 
-   
     </nav>
-  </header>
+      </header>
 
 
   <main>
