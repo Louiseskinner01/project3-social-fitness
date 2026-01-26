@@ -2,12 +2,12 @@ from django.http import HttpResponseForbidden
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, required_POST
 from django.views.generic import ListView
 from django.shortcuts import render, redirect, get_object_or_404
-
-from .forms import PostForm
-from .models import Post
+from django.contrib import messages
+from .forms import PostForm, CommentForm
+from .models import Post, Comment
 
 def landing(request):
     return render(request, "social/landing.html")
@@ -64,3 +64,36 @@ def signup(request):
         form = UserCreationForm()
 
     return render(request, "registration/signup.html", {"form": form})
+
+@login_required
+@required_POST
+def add_comment(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+
+    form = CommentForm(request.POST)
+    if form.is_valid():
+        comment = form.save(commit=False)
+        comment.post = post
+        comment.user = request.user
+        comment.save()
+        messages.success(request, "Comment added!")
+    else:
+        messages.error(request, "Could not add comment.")    
+
+    return redirect("feed")
+
+@login_required
+def comment_edit(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id, user=request.user)
+
+    if request.method == "POST":
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Comment updated!")
+            return redirect("feed")  # or "profile"
+        messages.error(request, "Please correct the error below.")
+    else:
+        form = CommentForm(instance=comment)
+
+    return render(request, "social/edit_comment.html", {"form": form, "comment": comment})
