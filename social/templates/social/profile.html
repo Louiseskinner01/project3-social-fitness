@@ -1,0 +1,27 @@
+{% extends "social/base.html" %}
+
+{% block content %}
+  <h2>My Posts</h2>
+
+  {% if posts %}
+    {% for post in posts %}
+      <div style="margin-bottom: 20px;">
+        <img src="{{ post.image.url }}" alt="Post image" style="max-width: 300px;">
+
+        {% if post.caption %}
+          <p>{{ post.caption }}</p>
+        {% endif %}
+
+        <small>Posted on {{ post.created_at }}</small>
+
+        <form method="POST" action="{% url 'delete_post' post.id %}">
+          {% csrf_token %}
+          <button type="submit">Delete</button>
+        </form>
+      </div>
+      <hr>
+    {% endfor %}
+  {% else %}
+    <p>You haven’t posted anything yet.</p>
+  {% endif %}
+{% endblock %}
