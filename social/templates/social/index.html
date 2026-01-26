@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Social Fitness</title>
-</head>
-<body>
-
 {% extends "social/base.html" %}
 
-
-{% block title %}Home{% endblock %}
+{% block title %}Social Feed{% endblock %}
 
 {% block content %}
 <h2>Social Feed</h2>
@@ -30,11 +21,38 @@
 {% endif %}
 
 <small>Posted by {{ post.user }} on {{ post.created_at }}</small>
-</div>
+
+
+<h5>Comments</h5>
+
+{% for comment in post.comments.all %}
+  <div>
+    <strong>{{ comment.user.username }}</strong>: {{ comment.body }}
+    {% if user.is_authenticated and comment.user == user %}
+      <a href="{% url 'comment_edit' comment.id %}">Edit</a>
+    {% endif %}
+  </div>
+
 {% endfor %}
+
+
+{% if user.is_authenticated %}
+  <form method="POST" action="{% url 'add_comment' post.id %}">
+    {% csrf_token %}
+    <textarea name="body" rows="2" placeholder="Add a comment..." required></textarea>
+    <button type="submit">Post</button>
+  </form>
 {% else %}
-<p>No posts yet.</p>
+<p><a href="{% url 'account_login' %}">Log in</a> to comment.</p>
 {% endif %}
+
+</div>
+
+{% endfor %}
+
+{% endif %}
+
+
 
 {% if is_paginated %}
 <nav aria-label="Page navigation">
@@ -47,13 +65,12 @@
     {% endif %}
 </ul>
 </nav>
-{% endif %}
 
+{% endif %}
 {% endblock %}
 
 {% block copyright %}
     Copyright 2023 Louise Skinner
 {% endblock %}
 
-</body>
-</html>
+
