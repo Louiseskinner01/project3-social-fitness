@@ -11,5 +11,7 @@ urlpatterns = [
     path("signup/", signup, name="signup"),
     path("posts/<int:post_id>/comment/", views.add_comment, name="add_comment"),
     path("comments/<int:comment_id>/edit/", views.comment_edit, name="comment_edit"),
+    path("posts/<int:post_id>/like/", views.toggle_like, name="toggle_like"),
+
 ]
 
