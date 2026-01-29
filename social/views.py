@@ -2,12 +2,13 @@ from django.http import HttpResponseForbidden
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.decorators import login_required, required_POST
+from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_POST
 from django.views.generic import ListView
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .forms import PostForm, CommentForm
-from .models import Post, Comment
+from .models import Post, Comment, Like
 
 def landing(request):
     return render(request, "social/landing.html")
@@ -66,7 +67,7 @@ def signup(request):
     return render(request, "registration/signup.html", {"form": form})
 
 @login_required
-@required_POST
+@require_POST
 def add_comment(request, post_id):
     post = get_object_or_404(Post, id=post_id)
 
@@ -97,3 +98,15 @@ def comment_edit(request, comment_id):
         form = CommentForm(instance=comment)
 
     return render(request, "social/edit_comment.html", {"form": form, "comment": comment})
+
+
+@login_required
+@require_POST
+def toggle_like(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+#Sample code from chatGPT below 
+    like, created = Like.objects.get_or_create(post=post, user=request.user)
+    if not created:
+        like.delete()
+
+    return redirect(request.META.get("HTTP_REFERER", "feed"))    
