@@ -3,10 +3,27 @@ from django.contrib.auth.models import User
 
 
 class Post(models.Model):
+    WORKOUT = [
+        ("run", "RUN"),
+        ("cycle", "CYCLE"),
+        ("row", "ROW"),
+        ("swim", "SWIM"),
+        ("yoga", "YOGA"),
+        ("pilates", "PILATES"),
+        ("functional strength", "FUNCTIONAL STRENGTH"),
+        ("other", "OTHER")
+    ]
+    INTENSITY = [
+        ("easy", "EASY"),
+        ("medium", "MEDIUM"),
+        ("hard", "HARD")
+    ]
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts")
     image = models.ImageField(upload_to="posts/")
     caption = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    workout = models.CharField(max_length=20, choices=WORKOUT, blank=True)
+    intensity = models.CharField(max_length=20, choices=INTENSITY, blank=True)
 
     def __str__(self):
         return f"Post {self.id} by {self.user.username}"
