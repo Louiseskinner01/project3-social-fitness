@@ -26,12 +26,13 @@
     {% endif %}
   </div>
 
+
   {% if post.workout %}
-  <p><strong>Workout:</strong> {{ post.get_workout_display }}</p> #Used the get method as the model uses choices - TIP FROM CHAT GPT
+  <p><strong>Workout:</strong> {{ post.get_workout_display }}</p> 
 {% endif %}
 
 {% if post.intensity %}
-  <p><strong>Intensity:</strong> {{ post.get_intensity_display }}</p> #Used the get method as the model uses choices - TIP FROM CHAT GPT
+  <p><strong>Intensity:</strong> {{ post.get_intensity_display }}</p> 
 {% endif %}
 
 {% endfor %}
