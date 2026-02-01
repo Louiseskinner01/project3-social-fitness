@@ -6,7 +6,7 @@
   {% if posts %}
     {% for post in posts %}
       <div style="margin-bottom: 20px;">
-        <img src="{{ post.image.url }}" alt="Post image" style="max-width: 300px;">
+        <img src="{{ post.image.url }}" alt="Post image">
 
         {% if post.caption %}
           <p>{{ post.caption }}</p>
