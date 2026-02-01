@@ -42,7 +42,7 @@
   <form method="POST" action="{% url 'add_comment' post.id %}">
     {% csrf_token %}
     <textarea name="body" rows="2" placeholder="Add a comment..." required></textarea>
-    <button type="submit">Post</button>
+    <button type="submit" class="btn btn-primary">Post</button>
   </form>
 {% else %}
 <p><a href="{% url 'account_login' %}">Log in</a> to comment.</p>
@@ -53,7 +53,7 @@
 {% if user.is_authenticated %}
   <form method="POST" action="{% url 'toggle_like' post.id %}" style="display:inline;">
     {% csrf_token %}
-    <button type="submit">Like / Unlike</button>
+    <button type="submit" class="btn btn-success">Like / Unlike</button>
   </form>
 {% else %}
   <p><a href="{% url 'account_login' %}">Log in</a> to like.</p>

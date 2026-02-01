@@ -5,7 +5,18 @@
 
   <form method="POST" enctype="multipart/form-data" class="create-post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Create Post</button>
+
+    <div class="mb-3">
+      <label class="form-label">Image</label>
+      {{ form.image }}
+    </div>
+  
+    <div class="mb-3">
+      <label class="form-label">Caption</label>
+       {{ form.caption }} 
+    </div>
+
+    
+    <button type="submit" class="btn btn-primary">Create Post</button>
   </form>
 {% endblock %}
