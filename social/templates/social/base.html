@@ -71,12 +71,15 @@
   </header>
 
 
-  <main>
+  <main class="container mt-4">
+    <div class="row">
+      <div class="col-12">
     {% block content %}{% endblock %}
-    
+    </div>
+    </div>
   </main>
 
-  <footer>
+  <footer class="m-0">
     {% block copyright %}
       Created by Louise Skinner
     {% endblock copyright %}
