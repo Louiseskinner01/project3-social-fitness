@@ -68,3 +68,38 @@ source: [project3-social-fitness amiresponsive](https://ui.dev/amiresponsive?url
   - Comments nested beneath posts. 
   - Conditional navigation links based on login state
 
+
+#### 4. Skeleton
+
+**[Wireframes](#wireframes)** (see below)
+
+#### 5. Surface
+
+**Visual Design Elements**
+- **[Colours](#colour-scheme)** (see below)
+- **[Typography](#typography)** (see below)
+
+### Colour Scheme
+
+The visual design of Social Fitness follows a minimal and content-focused approach. The design philosophy aligns with modern social platforms where simplicity and clarity enhance user engagement whilst adopting a cleaner and more neutral style to support usability and readability.
+
+Bootstrap’s default styling and component library were intentionally used to ensure visual consistency, accessibility, and responsive behaviour across devices. The design prioritises user-generated content—such as workout images and captions—rather than decorative elements, allowing posts to remain the primary focal point of the interface.
+A restrained colour palette and standardised button styles were selected to reduce visual clutter, improve contrast, and maintain a professional appearance suitable for a social platform. This approach supports scalability, ensuring that additional features or user-customisation options can be integrated in future iterations without conflicting with an overly complex theme.
+
+**Colour pallet**<br>
+- Delete button (btn-danger)
+- Like/unlike button ()
+- Post button
+- Login
+- Logout
+
+![screenshot](documentation/images/coolors-colour-theme.png)
+
+### Typography
+
+
+
+## Wireframes
+
+To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
