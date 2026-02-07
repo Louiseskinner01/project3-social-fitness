@@ -12,3 +12,7 @@ Social Fitness is a community-driven web application designed to motivate users 
 
 The application focuses on simplicity, accessibility, and accountability, providing a space where users can document their fitness journey, interact with a supportive community, and manage their own content through personalised profiles.
 
+**Site Mockups**
+![screenshot](documentation/images/site-mockup.png)
+
+source: [project3-social-fitness amiresponsive](https://ui.dev/amiresponsive?url=https://louiseskinner01.github.io/project3-social-fitness)
