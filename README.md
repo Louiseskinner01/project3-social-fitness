@@ -360,6 +360,7 @@ There are no remaining major differences between the local version when compared
 | [Interactive Frontend Development](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
 | [w3schools](https://www.w3schools.com/) | Help with form validation, display:block/none vs visibiliy: visible/hidden |
 | [Bootstrap](https://getbootstrap.com) | Various components / responsive front-end framework |
+| [Django](https://django.com) | Various components such as forms, loops and reusable templates |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations:<br>**Example 1**<br>**Example 2**<br>**Example 3** 
 
 ### Media
@@ -373,7 +374,6 @@ There are no remaining major differences between the local version when compared
 | Source | Notes |
 | --- | --- |
 | [favicon.io](https://favicon.io) | Generating the favicon |
-| [Font Awesome](https://fontawesome.com) | Icons used throughout the site |
 | [TinyPNG](https://tinypng.com) | Compressing images < 5MB |
 | [CompressPNG](https://compresspng.com) | Compressing images > 5MB |
 | [GoogleFonts](https://fonts.google.com/) | Font styles throughout the site |
