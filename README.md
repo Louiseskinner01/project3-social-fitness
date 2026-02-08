@@ -112,5 +112,5 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Create Post | ![screenshot](documentation/wireframes/create-post.png) | 
 | Login | ![screenshot](documentation/wireframes/login.png) | 
 | My Profile | ![screenshot](documentation/wireframes/my-profile.png) |
-| Sign up | ![screenshot](documentation/wireframes/signup.png) | 
+| Sign up | ![screenshot](documentation/wireframes/sign-up.png) | 
 | Social Feed | ![screenshot](documentation/wireframes/social-feed.png) |
