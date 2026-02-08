@@ -174,3 +174,35 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Conditional Navigation | “Create Post” link only visible when user is on profile page and authenticated. |  |
 | Responsive Design | Bootstrap grid and fluid images ensure mobile-first compatibility. | ![screenshot]() |
 | Form Styling | Bootstrap form controls used for consistent UI across posts, comments, and authentication forms. | ![screenshot]() |
+
+### Future Features
+
+**Profile Pictures / Avatars**: Allow users to upload a personal image to increase individuality and community recognition.
+
+**User Bio / About Section**: Provide a short description field so users can share fitness goals or personal interests.
+
+**Follow / Friend System**: Enable users to follow others and view a personalised activity feed.
+
+**Reply to Comments**: Introduce threaded conversations to improve interaction and discussion depth.
+
+**Notifications**: Alert users when their posts receive likes or comments to increase engagement.
+
+**User Mentions (@username)**: Allow tagging other users within comments to encourage social interaction.
+
+**Workout Statistics Fields**: Add optional inputs such as duration, distance, or calories burned to enrich workout data.
+
+**Progress Tracking Dashboard**: Display charts or summaries of user activity over time for motivation and goal tracking.
+
+**Workout Tags / Filters**: Allow filtering of posts by workout category (e.g., cardio, strength, flexibility).
+
+**Dark Mode Toggle**: Provide a user-controlled theme switch for improved accessibility and personal preference.
+
+**Email Verification**: Improve account security by requiring confirmation before activation.
+
+**Password Reset Functionality**: Allow users to securely recover forgotten passwords without administrator assistance.
+
+**Infinite Scroll / Advanced Pagination**: Improve performance and usability as the number of posts grows.
+
+**Report Post Feature**: Enable users to flag inappropriate or harmful content for moderation.
+
+**Admin Analytics Dashboard**: Provide administrators with insights into user activity and engagement trends.
