@@ -224,3 +224,26 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | [![badge](https://img.shields.io/badge/ChatGPT-grey?logo=openai&logoColor=75A99C)](https://chat.openai.com) | Help debug, troubleshoot, and explain things. |
 | [![badge](https://img.shields.io/badge/W3Schools-grey?logo=w3schools&logoColor=04AA6D)](https://www.w3schools.com) | Tutorials/Reference Guide |
 | [![badge](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/) | Guidance for implementing Django framework |
+
+
+## Agile Development Process
+
+### GitHub Projects
+
+
+[GitHub Projects](https://www.github.com/Louiseskinner01/project2-the-countdown/projects) served as an Agile tool for this project. Through it, EPICs, User Stories, issues/bugs, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
+
+| Stage   | Screenshot |
+| ----- | --- |
+| To Do | ![screenshot](documentation/project-board/board/project-board-todo.png) |
+| In-progress | ![](documentation/project-board/board/project-board-even.png) ![screenshot](documentation/project-board/board/project-board-inprogess-done.png) |
+| Done | ![screenshot](documentation/project-board/board/project-board-done.png) |
+
+### GitHub Issues
+
+[GitHub Issues](https://www.github.com/Louiseskinner01/project3-social-fitness/issues) served as an another Agile tool. There, I managed my User Stories and Milestone tasks, and tracked any issues/bugs.
+
+| Link | Screenshot |
+| --- | --- |
+| [![GitHub issues](https://img.shields.io/github/issues/Louiseskinner01/project3-social-fitness)](https://www.github.com/Louiseskinner01/project3-social-fitness/issues) | ![screenshot](documentation/project-board/issues/project-board-open-task.png) |
+| [![GitHub closed issues](https://img.shields.io/github/issues-closed/Louiseskinner01/project3-social-fitness)](https://www.github.com/Louiseskinner01/project3-social-fitness/issues?q=is%3Aissue+is%3Aclosed) | ![screenshot](documentation/project-board/issues/project-board-closed-task.png) |
