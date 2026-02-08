@@ -150,3 +150,27 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | As a casual user | I want to be able to share my workouts | so that I can enjoy the web application without pressure. |
 | As a competitive user (fitness influencer)| I want to sutilise the app | so that I can inspire other users who are new to fitness. |
 | As a user new to fintess | I want to be able to access a community | so that I can learn and be inspired by fitness content. |
+
+## Features
+### Existing Features
+
+| Feature | Notes | Screenshot |
+| --- | --- | --- |
+| User Registration | Users can create an account with username and password. Optional email field supported via custom form. | ![screenshot](documentation/features/difficulty-selection.png) |
+| Login / Logout | Secure authentication with conditional navigation links based on login state.| ![screenshot](documentation/features/timer-countdown.png) |
+| User Profile | Dedicated profile page displaying user’s posts and comments. Access restricted to authenticated users. | ![screenshot](documentation/features/features-ok-button.png) |
+| Random Number Generation | Six numbers are generated at random (four small, two large). This ensures variety, so each game feels unique and unpredictable. | ![screenshot](documentation/features/random-numbers.png) |
+| Create Post | Users can upload an image, add an optional caption, select workout type and intensity. | ![screenshot](documentation/features/target-number.png) |
+| Delete Post | Users can delete only their own posts; ownership validation enforced.| ![screenshot](documentation/features/keypad-operators.png) |
+| Workout Type Field | Custom dropdown field allowing users to categorise workouts (Run, Yoga, Strength, etc.). | ![screenshot](documentation/features/equation-validation.png) |
+| Workout Intensity Field | Optional intensity selection (Easy, Medium, Hard) to personalise workout entries. | [screenshot](documentation/features/undo-btn-used.png) |
+| Social Feed | Displays all user posts chronologically with responsive image scaling. | ![screenshot](documentation/features/console-play.png) |
+| Add Comment | Authenticated users can add comments beneath posts. | ![screenshot](documentation/features/message-lose.png) |
+| Edit Comment| Users can edit only their own comments with permission checks in place. | ![screenshot](documentation/features/play-again.png) |
+| Like / Unlike Post| Heart-icon toggle button allowing one like per user per post with visual state change. | ![screenshot](documentation/features/used-numbers.png) |
+| Like Constraint | Database-level uniqueness constraint prevents duplicate likes. | ![screenshot](documentation/features/orientation-lock-small-screen.png) |
+| Responsive Navbar | Navigation adapts based on authentication state and screen size. | ![screenshot](documentation/features/user-registration.png)  |
+| Custom 404 Page | User-friendly error page with conditional navigation options. | ![screenshot](documentation/features/404.png) |
+| Conditional Navigation | “Create Post” link only visible when user is on profile page and authenticated. |  |
+| Responsive Design | Bootstrap grid and fluid images ensure mobile-first compatibility. | ![screenshot]() |
+| Form Styling | Bootstrap form controls used for consistent UI across posts, comments, and authentication forms. | ![screenshot]() |
