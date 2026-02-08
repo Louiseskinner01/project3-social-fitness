@@ -114,3 +114,22 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | My Profile | ![screenshot](documentation/wireframes/my-profile.png) |
 | Sign up | ![screenshot](documentation/wireframes/sign-up.png) | 
 | Social Feed | ![screenshot](documentation/wireframes/social-feed.png) |
+
+
+## User Stories
+### General Play
+
+| Target | Expectation | Outcome |
+| --- | --- | --- |
+| As a user | I would like to upload a image | so that I can populate my profile page with images of my workouts. |
+| As a user | I want add a caption | so that my posts can be accompanied by a description. |
+| As a user | I would like to add a workout type and an intensity level | to give more meaning to my workout post. |
+| As a user | I would like to create an account | so I can use the social-fitness platform. |
+| As a user | I would like to log in and out out of my account | so my profile is kept safe from non-authenticated users. |
+| As a user | I would like to be able to delete my post | so I have full control of my user profile and what is and isnt displayed. |
+| As a user | I would like like to view the main social feed | so I can be inspired by other users. |
+| As a user |  I would like to like posts that other users have posted on the main social feed | so that I can share my interests. |
+| As a user | I would like to comment on other users posts  | so that I can share my thoughts. |
+|As a user | I want to be able to edit a comment I have made | so my comment can be corrected if I have made a mistake.|
+|As a user | I want to access to to simple and clean navbar | so I can easily navigate through the web apps pages. |
+| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. |
