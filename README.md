@@ -133,3 +133,20 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 |As a user | I want to be able to edit a comment I have made | so my comment can be corrected if I have made a mistake.|
 |As a user | I want to access to to simple and clean navbar | so I can easily navigate through the web apps pages. |
 | As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. |
+
+
+### Accessibility & Usability
+
+| Target | Expectation | Outcome |
+| --- | --- | --- |
+| As a visually impaired user | I want clear colour contrasts (e.g. bold backgrounds and bright highlights) | so that I can see buttons and numbers more clearly. |
+| As a user with little computer skills | I want a simple web app | so I can fully utilise the apps features. |
+| As a mobile user | I want large, tap-friendly buttons | so that I can use the app easily on my phone. |
+
+### Content & Motivation 
+
+| Target | Expectation | Outcome |
+| --- | --- | --- |
+| As a casual user | I want to be able to share my workouts | so that I can enjoy the web application without pressure. |
+| As a competitive user (fitness influencer)| I want to sutilise the app | so that I can inspire other users who are new to fitness. |
+| As a user new to fintess | I want to be able to access a community | so that I can learn and be inspired by fitness content. |
