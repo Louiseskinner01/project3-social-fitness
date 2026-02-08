@@ -350,3 +350,37 @@ By forking the GitHub Repository, you make a copy of the original repository on 
 ### Local VS Deployment
 
 There are no remaining major differences between the local version when compared to the deployed version online.
+
+
+## Credits
+### Content
+
+| Source | Notes |
+| --- | --- |
+| [Interactive Frontend Development](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
+| [w3schools](https://www.w3schools.com/) | Help with form validation, display:block/none vs visibiliy: visible/hidden |
+| [Bootstrap](https://getbootstrap.com) | Various components / responsive front-end framework |
+| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations:<br>**Example 1**<br>**Example 2**<br>**Example 3** 
+
+### Media
+- Image Compression
+  - [TinyPNG](https://tinypng.com) (for images <5MB)
+  - [CompressPNG](https://compresspng.com) (for images >5MB)
+- Logo Maker
+  - [Looka](https://looka.com/explore)
+
+
+| Source | Notes |
+| --- | --- |
+| [favicon.io](https://favicon.io) | Generating the favicon |
+| [Font Awesome](https://fontawesome.com) | Icons used throughout the site |
+| [TinyPNG](https://tinypng.com) | Compressing images < 5MB |
+| [CompressPNG](https://compresspng.com) | Compressing images > 5MB |
+| [GoogleFonts](https://fonts.google.com/) | Font styles throughout the site |
+
+### Acknowledgements
+
+- I would like to thank the [Code Institute](https://codeinstitute.net) Tutor Team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and impostor syndrome.
+- I would like to thank my little boy for giving me the drive and motivation to develop the right skills so I can be a successful web developer.
+
