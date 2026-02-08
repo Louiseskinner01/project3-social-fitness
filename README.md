@@ -247,3 +247,50 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | --- | --- |
 | [![GitHub issues](https://img.shields.io/github/issues/Louiseskinner01/project3-social-fitness)](https://www.github.com/Louiseskinner01/project3-social-fitness/issues) | ![screenshot](documentation/project-board/issues/project-board-open-task.png) |
 | [![GitHub closed issues](https://img.shields.io/github/issues-closed/Louiseskinner01/project3-social-fitness)](https://www.github.com/Louiseskinner01/project3-social-fitness/issues?q=is%3Aissue+is%3Aclosed) | ![screenshot](documentation/project-board/issues/project-board-closed-task.png) |
+
+
+### MoSCoW Prioritization
+
+I've decomposed my Epics into User Stories for prioritizing and implementing them. Using this approach, I was able to apply "MoSCoW" prioritization and labels to my User Stories within the Issues tab.
+
+- **Must Have**: guaranteed to be delivered - required to Pass the project (*max ~60% of stories*)
+
+  - Must Have (Core to the project – without these the Social Fitness web based app won't be successful).
+  - User Registration & Authentication: Users must be able to create an account, log in, and log out securely.
+  - Create Post Functionality: Authenticated users must be able to upload an image and publish a workout post.
+  - View Social Feed: All users must be able to view posts shared by the community.
+  - User Profile Page: Users must be able to access a personal profile displaying their own posts.
+  - Delete Own Posts: Ownership validation must prevent users from deleting others’ content.
+  - Add Comments: Authenticated users must be able to comment on posts.
+  - Edit Own Comments: Users must be able to modify only their own comments.
+  - Like / Unlike Posts: Users must be able to engage with posts through a like system.
+  - Database Integrity Constraints: Each user may only like a post once (unique like constraint).
+  - Responsive Navigation: Navbar must adapt to authentication state and screen size.
+  - Form Validation & Security: Prevent invalid submissions and unauthorised actions.
+  - Custom Data Models: Posts must include workout type and intensity fields to demonstrate model customisation.
+
+- **Should Have**: adds significant value, but not vital (*~20% of stories*)
+
+  - Profile Customisation: Ability for users to upload a profile picture or short bio.
+  - Comment Deletion: Allow users to remove their own comments in addition to editing.
+  - Improved UI Styling: Enhanced visual polish beyond default Bootstrap components.
+  - Post Sorting / Filtering: Ability to filter posts by workout type or date.
+  - Password Reset Functionality: Self-service recovery for forgotten passwords.
+  - Enhanced Error Pages: Custom 403 and 500 templates for a more consistent user experience.
+
+- **Could Have**: has small impact if left out (*the rest ~20% of stories*)
+
+  - Dark Mode Toggle: Optional theme switch for accessibility and user preference.
+  - Animated Like Button: Micro-interaction animation for visual feedback.
+  - Workout Statistics Tracking: Additional optional fields such as duration or calories burned.
+  - User Notifications: Alerts for likes and comments.
+  - Follow / Friend System: Personalised feeds based on followed users.
+  - Threaded Comments / Replies: Nested discussions instead of flat comment lists.
+
+- **Won't Have**: not a priority for this iteration - future features
+
+  - Real-Time Messaging / Chat System: Requires WebSockets and advanced backend architecture.
+  - Third-Party Fitness API Integration: Out of scope due to external dependency management.
+  - Advanced Analytics Dashboards: Would significantly increase development complexity.
+  - Mobile Native Application: The project is focused on a responsive web platform only.
+  - Monetisation / Subscription Features: Not aligned with the educational objectives of the project.
