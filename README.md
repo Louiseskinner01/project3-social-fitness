@@ -103,3 +103,14 @@ A restrained colour palette and standardised button styles were selected to redu
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+
+
+| Page | Mobile (landscape & portrait)  Tablet Desktop |
+| --- | --- |
+| Home| ![screenshot](documentation/wireframes/Home.png) |
+| 404 Error | ![screenshot](documentation/wireframes/404.png) |
+| Create Post | ![screenshot](documentation/wireframes/create-post.png) | 
+| Login | ![screenshot](documentation/wireframes/login.png) | 
+| My Profile | ![screenshot](documentation/wireframes/my-profile.png) |
+| Sign up | ![screenshot](documentation/wireframes/signup.png) | 
+| Social Feed | ![screenshot](documentation/wireframes/social-feed.png) |
