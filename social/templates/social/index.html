@@ -4,66 +4,57 @@
 
 {% block content %}
 <h2>Social Feed</h2>
-  
+
 {% if posts %}
-    {% for post in posts %}
-      <div style="margin-bottom: 20px;">  
-        <img src="{{ post.image.url }}" alt="Post image" class="img-fluid d-block mx-auto">
-{% if post.caption %}
-<p>{{ post.caption }}</p>
+{% for post in posts %}
+<div style="margin-bottom: 20px;">
+  <img src="{{ post.image.url }}" alt="Post image" class="img-fluid d-block mx-auto">
+  {% if post.caption %}
+  <p>{{ post.caption }}</p>
+  {% endif %}
 
-{% endif %}
+  <small>Posted by {{ post.user }} on {{ post.created_at }}</small>
 
-<small>Posted by {{ post.user }} on {{ post.created_at }}</small>
-
-
-<h5>Comments</h5>
-{% for comment in post.comments.all %}
+  <h5>Comments</h5>
+  {% for comment in post.comments.all %}
   <div>
     <strong>{{ comment.user.username }}</strong>: {{ comment.body }}
     {% if user.is_authenticated and comment.user == user %}
-      <a href="{% url 'comment_edit' comment.id %}">Edit</a>
+    <a href="{% url 'comment_edit' comment.id %}">Edit</a>
     {% endif %}
   </div>
-
-
   {% if post.workout %}
-  <p><strong>Workout:</strong> {{ post.get_workout_display }}</p> 
-{% endif %}
+  <p><strong>Workout:</strong> {{ post.get_workout_display }}</p>
+  {% endif %}
 
-{% if post.intensity %}
-  <p><strong>Intensity:</strong> {{ post.get_intensity_display }}</p> 
-{% endif %}
+  {% if post.intensity %}
+  <p><strong>Intensity:</strong> {{ post.get_intensity_display }}</p>
+  {% endif %}
+  {% endfor %}
 
-{% endfor %}
-
-
-{% if user.is_authenticated %}
+  {% if user.is_authenticated %}
   <form method="POST" action="{% url 'add_comment' post.id %}">
     {% csrf_token %}
     <textarea name="body" rows="2" placeholder="Add a comment..." class="form-control" required></textarea>
     <button type="submit" class="btn btn-primary">Post</button>
   </form>
-{% else %}
-<p><a href="{% url 'account_login' %}">Log in</a> to comment.</p>
-{% endif %}
+  {% else %}
+  <p><a href="{% url 'account_login' %}">Log in</a> to comment.</p>
+  {% endif %}
 
-<p><strong>{{ post.likes.count }}</strong> likes</p>
+  <p><strong>{{ post.likes.count }}</strong> likes</p>
 
-{% if user.is_authenticated %}
+  {% if user.is_authenticated %}
   <form method="POST" action="{% url 'toggle_like' post.id %}" style="display:inline;">
     {% csrf_token %}
     <button type="submit" class="btn btn-success">Like / Unlike</button>
   </form>
-{% else %}
+  {% else %}
   <p><a href="{% url 'account_login' %}">Log in</a> to like.</p>
-{% endif %}
-
-
+  {% endif %}
 </div>
 {% endfor %}
 {% endif %}
-
 
 {% if is_paginated %}
 <nav aria-label="Page navigation">
@@ -74,13 +65,11 @@
     {% if page_obj.has_next %}
     <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
     {% endif %}
-</ul>
+  </ul>
 </nav>
 {% endif %}
 {% endblock %}
 
 {% block copyright %}
-    Copyright 2023 Louise Skinner
+Copyright 2023 Louise Skinner
 {% endblock %}
-
-

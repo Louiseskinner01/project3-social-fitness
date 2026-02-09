@@ -158,11 +158,11 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | --- | --- | --- |
 | User Registration | Users can create an account with username and password. Optional email field supported via custom form. | ![screenshot](documentation/existing-features/sign-up.png) |
 | Login / Logout | Secure authentication with conditional navigation links based on login state.| ![screenshot](documentation/existing-features/login.png)<br>![screenshot](documentation/existing-features/logout.png) |
-| User Profile | Dedicated profile page displaying user’s posts and comments. Access restricted to authenticated users. | ![screenshot](documentation/features/features-ok-button.png) |
+| User Profile | Dedicated profile page displaying user’s posts and comments. Access restricted to authenticated users. | ![screenshot](documentation/existing-features/user-profile.png) |
 | Create Post | Users can upload an image, add an optional caption, select workout type and intensity. | ![screenshot](documentation/existing-features/create-post.png) |
 | Delete Post | Users can delete only their own posts; ownership validation enforced.| ![screenshot](documentation/existing-features/delete-post.png) |
 | Workout Type Field | Custom dropdown field allowing users to categorise workouts (Run, Yoga, Strength, etc.). | ![screenshot](documentation/existing-features/workout-type.png) |
-| Workout Intensity Field | Optional intensity selection (Easy, Medium, Hard) to personalise workout entries. | [screenshot](documentation/existing-features/intensity-type.png) |
+| Workout Intensity Field | Optional intensity selection (Easy, Medium, Hard) to personalise workout entries. | ![screenshot](documentation/existing-features/intensity-type.png) |
 | Social Feed | Displays all user posts chronologically with responsive image scaling. | ![screenshot](documentation/existing-features/feed.png) |
 | Add Comment | Authenticated users can add comments beneath posts. | ![screenshot](documentation/existing-features/add-comment.png) |
 | Edit Comment| Users can edit only their own comments with permission checks in place. | ![screenshot](documentation/existing-features/edit-comment.png) |
@@ -172,7 +172,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Custom 404 Page | User-friendly error page with conditional navigation options. | ![screenshot](documentation/features/404.png) |
 | Conditional Navigation | “Create Post” link only visible when user is on profile page and authenticated. | ![screenshot](documentation/existing-features/conditional-nav.png) |
 | Responsive Design | Bootstrap grid and fluid images ensure mobile-first compatibility. | ![screenshot](documentation/existing-features/responsive-design1.png)<br>![screenshot](documentation/existing-features/responsive-design2.png) |
-| Form Styling | Bootstrap form controls used for consistent UI across posts, comments, and authentication forms. | ![screenshot]() |
+
 
 ### Future Features
 
