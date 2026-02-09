@@ -234,9 +234,9 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 | Stage   | Screenshot |
 | ----- | --- |
-| To Do | ![screenshot](documentation/project-board/board/project-board-todo.png) |
-| In-progress | ![](documentation/project-board/board/project-board-even.png) ![screenshot](documentation/project-board/board/project-board-inprogess-done.png) |
-| Done | ![screenshot](documentation/project-board/board/project-board-done.png) |
+| To Do | ![screenshot](documentation/agile/to-do.png) |
+| In-progress | ![screenshot](documentation/agile/in-progress.png) |
+| Done | ![screenshot](documentation/agile/done.png) |
 
 ### GitHub Issues
 
