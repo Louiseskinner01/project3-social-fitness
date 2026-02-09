@@ -3,9 +3,37 @@
 {% block content %}
     <h2>Create an account</h2>
 
+    <main class="container">
+      <div class="row justify-content-center">
+        <div class="col-3 col-xl-2 mt-3 mb-3">
     <form method="POST" class="auth-form">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Sign Up</button>
+     
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+             {{ form.username }} 
+          </div> 
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+             {{ form.email }} 
+          </div> 
+          
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+             {{ form.password1 }} 
+          </div> 
+           
+          <div class="mb-3">
+            <label class="form-label">Re-enter password</label>
+             {{ form.password2 }} 
+          </div> 
+
+
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+
     </form>
+</div>
+</div>
+  </main>
 {% endblock%}
