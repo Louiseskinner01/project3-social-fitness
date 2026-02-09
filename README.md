@@ -163,7 +163,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Delete Post | Users can delete only their own posts; ownership validation enforced.| ![screenshot](documentation/existing-features/delete-post.png) |
 | Workout Type Field | Custom dropdown field allowing users to categorise workouts (Run, Yoga, Strength, etc.). | ![screenshot](documentation/existing-features/workout-type.png) |
 | Workout Intensity Field | Optional intensity selection (Easy, Medium, Hard) to personalise workout entries. | [screenshot](documentation/existing-features/intensity-type.png) |
-| Social Feed | Displays all user posts chronologically with responsive image scaling. | ![screenshot](documentation/existing-features/social-feed.png) |
+| Social Feed | Displays all user posts chronologically with responsive image scaling. | ![screenshot](documentation/existing-features/feed.png) |
 | Add Comment | Authenticated users can add comments beneath posts. | ![screenshot](documentation/existing-features/add-comment.png) |
 | Edit Comment| Users can edit only their own comments with permission checks in place. | ![screenshot](documentation/existing-features/edit-comment.png) |
 | Like / Unlike Post| Heart-icon toggle button allowing one like per user per post with visual state change. | ![screenshot](documentation/existing-features/like-post.png) |
@@ -171,7 +171,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Responsive Navbar | Navigation adapts based on authentication state and screen size. | ![screenshot](documentation/existing-features/navbar-response1.png)<br>![screenshot](documentation/existing-features/navbar-response2.png) |
 | Custom 404 Page | User-friendly error page with conditional navigation options. | ![screenshot](documentation/features/404.png) |
 | Conditional Navigation | “Create Post” link only visible when user is on profile page and authenticated. | ![screenshot](documentation/existing-features/conditional-nav.png) |
-| Responsive Design | Bootstrap grid and fluid images ensure mobile-first compatibility. | ![screenshot]() |
+| Responsive Design | Bootstrap grid and fluid images ensure mobile-first compatibility. | ![screenshot](documentation/existing-features/responsive-design1.png)<br>![screenshot](documentation/existing-features/responsive-design2.png) |
 | Form Styling | Bootstrap form controls used for consistent UI across posts, comments, and authentication forms. | ![screenshot]() |
 
 ### Future Features
