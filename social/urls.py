@@ -2,6 +2,8 @@ from django.urls import path
 from .views import landing, profile, PostList, create_post, delete_post, signup
 from . import views
 
+handler404 = 'social.views.custom_404'
+
 urlpatterns = [
     path("", landing, name="landing"),
     path("feed/", PostList.as_view(), name="feed"),

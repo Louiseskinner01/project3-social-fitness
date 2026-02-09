@@ -1,5 +1,5 @@
 from django.http import HttpResponseForbidden
-
+from django.http import HttpResponse
 from django.contrib.auth import login
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
@@ -9,6 +9,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .forms import PostForm, CommentForm, CustomUserCreationForm
 from .models import Post, Comment, Like
+
+def custom_404(request, exception):
+    return HttpResponse('Hey there, page not found', status=404)
 
 def landing(request):
     return render(request, "social/landing.html")
