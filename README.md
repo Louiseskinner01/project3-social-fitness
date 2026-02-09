@@ -169,7 +169,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Like / Unlike Post| Heart-icon toggle button allowing one like per user per post with visual state change. | ![screenshot](documentation/existing-features/like-post.png) |
 | Like Constraint | Database-level uniqueness constraint prevents duplicate likes. | ![screenshot](documentation/existing-features/like-constraint.png) |
 | Responsive Navbar | Navigation adapts based on authentication state and screen size. | ![screenshot](documentation/existing-features/navbar-response1.png)<br>![screenshot](documentation/existing-features/navbar-response2.png) |
-| Custom 404 Page | User-friendly error page with conditional navigation options. | ![screenshot](documentation/features/404.png) |
+| Custom 404 Page | User-friendly error page with conditional navigation options. | ![screenshot](documentation/existing-features/4041.png)<br>![screenshot](documentation/existing-features/4042.png) |
 | Conditional Navigation | “Create Post” link only visible when user is on profile page and authenticated. | ![screenshot](documentation/existing-features/conditional-nav.png) |
 | Responsive Design | Bootstrap grid and fluid images ensure mobile-first compatibility. | ![screenshot](documentation/existing-features/responsive-design1.png)<br>![screenshot](documentation/existing-features/responsive-design2.png) |
 
