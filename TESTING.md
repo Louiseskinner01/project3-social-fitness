@@ -34,8 +34,7 @@ All tests were conducted manually using a combination of Google Chrome DevTools,
 
 | Feature Tested | Test Description                                   | Expected Outcome                                | Pass/Fail             |  Screenshot |
 | ------------------- | ------------------------------------------------ | ----------------------------------------------- | ------------------- | ----------- |
-
-| Signup (valid) |	Create a new account with valid username/password (and email if used) | Account created successfully and user is logged in / redirected		| ✅ Works | ![screenshot]() |
+| Signup (valid) | Create a new account with valid username/password (and email if used) | Account created successfully and user is logged in / redirected | ✅ Works | ![screenshot]() |
 | Signup (duplicate username)	| Attempt to sign up using an existing username	| Form displays error and prevents account creation		| ✅ Works | ![screenshot]() |
-| Signup (password mismatch) |	Enter two different passwords in password fields |	Validation error shown and account not created	| ✅ Works | ![screenshot]() |	
-| Signup (weak password)	| Enter a password | | ✅ Works | ![screenshot]()  |	
+| Signup (password mismatch) |	Enter two different passwords in password fields | Validation error shown and account not created | ✅ Works | ![screenshot]() |	
+| Signup (weak password) | Enter a password | xxxxxx | ✅ Works | ![screenshot]() |	
