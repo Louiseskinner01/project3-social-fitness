@@ -7,3 +7,18 @@
 
 The primary goal of testing was to ensure that the Social Fitness application performs consistently across multiple devices and screen sizes, maintaining both functionality and a smooth user experience.
 Testing focused on performance, accessibility, and responsiveness.
+
+## Approach
+Testing was carried out to verify that the website functions as intended, is fully responsive, and provides an intuitive user experience.
+All tests were conducted manually using a combination of Google Chrome DevTools, validation tools, and live user interaction testing.
+
+## Methods
+
+| Method                    | Description                                                                                                                                                                        | Tools Used                                                                                                                                |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **Manual Testing**        | Each feature and button was manually tested to verify correct functionality. This included checking form submissions, button click responses, login/signup authentication and image upload. |                                                                                                    |
+| **Responsive Testing**    | Tested using Chrome DevTools’ built-in device emulation. Ensured the layout adapts correctly to different screen widths and orientations.                                          | Chrome DevTools                                                                                                                           |
+| **Cross-Browser Compatability Testing** | Tested in multiple browsers to ensure consistent design, color rendering, and interactivity.                                                                                       | Chrome, Firefox, Safari, Edge                                                                                                     |
+| **Validation Testing**    | Used validation tools to check that the HTML and CSS are free from syntax errors and follow best practices.                                                           | [W3C HTML Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) |
+| **Accessibility Testing** | Checked color contrast, font readability, tab navigation, and proper use of ARIA and semantic tags where applicable.                                                               | Chrome Lighthouse, manual checks                                                                                                          |
+| **Performance Testing**   | Evaluated page load speed and responsiveness using Chrome Lighthouse.                                                                                                              | Chrome DevTools  Lighthouse        
