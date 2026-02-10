@@ -34,7 +34,8 @@ All tests were conducted manually using a combination of Google Chrome DevTools,
 
 | Feature Tested | Test Description                                   | Expected Outcome                                | Pass/Fail             |  Screenshot |
 | ------------------- | ------------------------------------------------ | ----------------------------------------------- | ------------------- | ----------- |
-| Signup (valid) | Create a new account with valid username/password (and email if used) | Account created successfully and user is logged in / redirected | ✅ Works | ![screenshot]() |
+| Signup (valid) | Create a new account with valid username/password (and email if used) | Account created successfully and user is logged in / redirected | ✅ Works | ![screenshot](documentation/manual-testing/required-email.png) |
 | Signup (duplicate username)	| Attempt to sign up using an existing username	| Form displays error and prevents account creation		| ✅ Works | ![screenshot]() |
-| Signup (password mismatch) |	Enter two different passwords in password fields | Validation error shown and account not created | ✅ Works | ![screenshot]() |	
+| Signup (password mismatch) |	Enter two different passwords in password fields | Validation error shown and account not created | ✅ Works | ![screenshot](documentation/manual-testing/Screenpassword-mismatch.png) |	
 | Signup (weak password) | Enter a password | xxxxxx | ✅ Works | ![screenshot]() |	
+|Brute-force URL testing | Visit restricted pages without being logged in as a aunthenticated user | Should send user to login page | ✅ Works | ![screenshot](documentation/manual-testing/brute-force1.png) <br> ![screenshot](documentation/manual-testing/brute-force2.png)|
