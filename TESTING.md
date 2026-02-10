@@ -37,6 +37,39 @@ All tests were conducted manually using a combination of Google Chrome DevTools,
 | Signup (valid) | Create a new account with valid username/password (and email if used) | Account created successfully and user is logged in / redirected | ✅ Works | ![screenshot](documentation/manual-testing/required-email.png) |
 | Signup (duplicate username)	| Attempt to sign up using an existing username	| Form displays error and prevents account creation		| ✅ Works | ![screenshot]() |
 | Signup (password mismatch) |	Enter two different passwords in password fields | Validation error shown and account not created | ✅ Works | ![screenshot](documentation/manual-testing/Screenpassword-mismatch.png) |	
-| Signup (weak password) | Enter a password | Should display an error message stating that the password is weak and what the requirements are for a strong and successful password  | ✅ Works | ![screenshot](documentation/manual-testing/week-password.png) |	
+| Signup (weak password) | Enter a weak password e.g l1 or 123 | Should display an error message stating that the password is weak and what the requirements are for a strong and successful password  | ✅ Works | ![screenshot](documentation/manual-testing/week-password.png) |	
 |Brute-force URL testing | Visit restricted pages without being logged in as a aunthenticated user | Should send user to login page | ✅ Works | ![screenshot](documentation/manual-testing/brute-force1.png) <br> ![screenshot](documentation/manual-testing/brute-force2.png)|
-| Navigation (Burger-icon)     | Changed the screen size to viarious sizes and also clicked on the burger icon when testing on mobile and tablet devices.   | Appears when the screen size is small and disappears (expanding into a full navigation bar) when the screen is large. | ✅ Works          | **Navbar expand** ![screenshot](documentation/manual-testing/navbar-expand.png) **Navbar toggle** ![screenshot](documentation/manual-testing/navbar-toggle.png) **Navbar expand** ![screenshot](documentation/manual-testing/navbar-toggle-expand.png) |
+| Navigation (Burger-icon)     | Changed the screen size to viarious sizes and also clicked on the burger icon when testing on mobile and tablet devices.   | Appears when the screen size is small and disappears (expanding into a full navigation bar) when the screen is large. | ✅ Works          | **Navbar expand** ![screenshot](documentation/manual-testing/navbar-expand.png)<br> **Navbar toggle** ![screenshot](documentation/manual-testing/navbar-toggle.png)<br> **Navbar toggle expand** ![screenshot](documentation/manual-testing/navbar-toggle-expand.png) |
+| Login (valid)                       | Log in with correct username and password                        | User is authenticated and redirected to Social Feed                      |           | ![screenshot]() |
+| Login (invalid)                     | Attempt login with incorrect password                            | Error message shown and login denied                                     |           | ![screenshot]() |
+| Logout                              | Click logout while logged in                                     | User is logged out and redirected; restricted pages no longer accessible |           | ![screenshot]() |
+| Create post (valid)                 | Submit new post with image + caption/workout/intensity           | Post is saved and displays on Feed and Profile                           |           | ![screenshot]() |
+| Create post (missing image)         | Submit post form without selecting an image                      | Form validation error displayed; post not created                        |           | ![screenshot]() |
+| Post custom fields optional         | Create post without workout/intensity                            | Post still creates successfully; optional fields remain blank            |           | ![screenshot]() |
+| Delete own post                     | Delete a post created by the logged-in user                      | Post removed from database and no longer displays                        |           | ![screenshot]() |
+| Delete other user post (defensive)  | Manually enter `/posts/<id>/delete/` for another user’s post     | Action denied (403/blocked); post remains                                |           | ![screenshot]() |
+| Add comment (valid)                 | Add a comment under a post while logged in                       | Comment saves and displays beneath the correct post                      |           | ![screenshot]() |
+| Add comment (logged out)            | Try to add comment while logged out                              | User redirected to login or prevented from commenting                    |           | ![screenshot]() |
+| Edit own comment                    | Edit a comment created by logged-in user                         | Updated comment saves and displays correctly                             |           | ![screenshot]() |
+| Edit other user comment (defensive) | Manually enter `/comments/<id>/edit/` for another user’s comment | Access denied (404/403); comment not changed                             |           | ![screenshot]() |
+| Like post                           | Click like button on a post                                      | Like is created; heart state/like count updates                          |           | ![screenshot]() |
+| Unlike post                         | Click like again on the same post                                | Like removed; heart state/like count updates                             |           | ![screenshot]() |
+| Prevent duplicate likes (defensive) | Click like repeatedly / refresh and like again                   | Only one like per user per post (no duplicates)                          |           | ![screenshot]() |
+| Navbar conditional links            | Compare navbar logged out vs logged in                           | Correct links shown/hidden based on auth state                           |           | ![screenshot]() |
+| Responsive navbar                   | Use small screen / hamburger toggle                              | Menu collapses/expands and all links remain accessible                   |           | ![screenshot]() |
+| Responsive images                   | View feed on small screen                                        | Images scale within container; no overflow                               |           | ![screenshot]() |
+| Custom 404 page                     | Visit non-existent URL e.g. `/test`                              | Custom 404 page displays with correct navigation link                    |           | ![screenshot]() |
+
+
+
+
+
+
+
+
+
+
+
+
+| Element Tested                | Test Description                   | Expected Outcome                        | Pass/Fail | Screenshot |
+| -------------------------- | ---------------------------------- | ----------------------------- | --------- | --------- |
