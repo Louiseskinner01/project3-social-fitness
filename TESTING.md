@@ -83,15 +83,15 @@ All tests were conducted manually using a combination of Google Chrome DevTools,
 | As a user, I want to log in so I can access my profile and posts	| Enter valid login credentials | User is authenticated and redirected to Social Feed | ✅ Pass |	
 | As a user, I want to be notified if login details are incorrect |	Enter invalid login credentials| Error message is displayed and login fails	| ✅ Pass  |
 | As a logged-in user, I want to create a post so I can share my workouts |	Submit a post with image and details |	Post appears on feed and profile | ✅ Pass  |	
-| As a logged-in user, I want optional workout fields so I’m not forced to enter extra data	Create post without workout/intensity |	Post still submits successfully	| ✅ Pass |
+| As a logged-in user, I want optional workout fields so I’m not forced to enter extra data	| Create post without workout/intensity |	Post still submits successfully	| ✅ Pass |
 | As a user, I want to delete my own posts so I can manage my content | Click delete on a post I created |	Post is removed from database and UI | ✅ Pass  |
 | As a user, I should not be able to delete another user’s post |	Manually enter delete URL for another user | Access is denied (403/404) and post remains | ✅ Pass  |
-| As a user, I want to comment on posts to interact with others | 	Add a valid comment	Comment displays under the correct post	 | ✅ Pass  | 
-| As a user, I want to edit my own comments	Edit an existing comment | 	Updated comment saves and displays correctly |  | 
+| As a user, I want to comment on posts to interact with others | 	Add a valid comment	| Comment displays under the correct post	 | ✅ Pass  | 
+| As a user, I want to edit my own comments | 	Edit an existing comment | 	Updated comment saves and displays correctly | ✅ Pass  | 
 | As a user, I should not edit other users’ comments |	Enter another user’s comment edit URL |	Access denied and comment unchanged	| ✅ Pass  |
-| As a user, I want to like posts to show engagement | Click like button	Heart icon changes and like count increases	| ✅ Pass   |
-| As a user, I want to unlike posts  | 	Click liked heart again	Heart icon reverts and like count decreases	 | ✅ Pass  | 
-| As a user, I should not be able to like a post multiple times	Attempt repeated likes	Only one like per user per post is stored	
+| As a user, I want to like posts to show engagement | Click like button |	Heart icon changes and like count increases	| ✅ Pass   |
+| As a user, I want to unlike posts  | 	Click liked heart again	| Heart icon reverts and like count decreases	 | ✅ Pass  | 
+| As a user, I should not be able to like a post multiple times | Attempt repeated likes | Only one like per user per post is stored	| ✅ Pass  |
 | As a user, I want responsive navigation on smaller screens  | 	Use hamburger menu on mobile view  | Navbar collapses and links remain usable  | ✅ Pass  | 	
-| As a user, I want images to scale correctly on all devices  |	View feed on mobile screen	Images remain within container and do not overflow |  ✅ Pass  | 
+| As a user, I want images to scale correctly on all devices  |	View feed on mobile screen |	Images remain within container and do not overflow |  ✅ Pass  | 
 | As a user, I want to see a helpful 404 page when a page doesn’t exist |	Visit invalid URL |	Custom styled 404 page displays with navigation options | ✅ Pass  | 
