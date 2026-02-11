@@ -113,5 +113,12 @@ By testing through Chrome DevTools, I was able to efficiently identify and resol
 
 I've tested my deployed project to check for responsiveness issues.
 
-| Page | Mobile (Portrait) | Mobile (Lanscape)| Tablet | Laptop | Desktop | 
-| --- | --- | --- | --- | ---| --- |
+| Page | Mobile | Tablet | Laptop | Desktop | 
+| --- | --- | --- | ---| --- |
+| Home|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| Social Feed|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| My profile|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| Create Post|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| Edit Comment|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| Login|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+|Sign up|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
