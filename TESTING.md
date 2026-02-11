@@ -56,7 +56,7 @@ All tests were conducted manually using a combination of Google Chrome DevTools,
 | Unlike post                         | Click like again on the same post                                | Like removed; heart state/like count updates                             |           | ![screenshot]() |
 | Prevent duplicate likes (defensive) | Click like repeatedly / refresh and like again                   | Only one like per user per post (no duplicates)                          |           | ![screenshot]() |
 | Navbar conditional links            | Compare navbar logged out vs logged in                           | Correct links shown/hidden based on auth state                           |           | **Logged out**![screenshot](documentation/manual-testing/navbar-response1.png) <br> **Logged in**![screenshot](documentation/manual-testing/navbar-response2.png) |
-| Responsive images                   | View feed on small screen                                        | Images scale within container; no overflow                               |           | ![screenshot]() |
+| Responsive images                   | View feed on small screen                                        | Images scale within container; no overflow                               |           | ![screenshot](documentation/manual-testing/overflow1.png) <br> ![screenshot](documentation/manual-testing/overflow2.png)|
 | Custom 404 page                     | Visit non-existent URL e.g. `/test`                              | Custom 404 page displays with correct navigation link                    |           | ![screenshot](documentation/manual-testing/4042.png) |
 
 
