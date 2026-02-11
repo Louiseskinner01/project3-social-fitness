@@ -77,9 +77,21 @@ All tests were conducted manually using a combination of Google Chrome DevTools,
 
 | User Story Tested | Test Description | Expected Outcome | Pass/Fail |
 | --- | --- | --- | --- |
-| “As a user, I want to choose my own difficulty level” | Visit the home page and click the PLAY? text on the screen, follow the instructions that lead to the select a difficulty level. Select a level by clicking on the button and then clicking the confirm difficulty button.  | The timer is updated to reflect the difficulty level that has been selected | ✅ Pass |
-| “As a user, I want to clearly see the timer and generated numbers” | Follow the game instructions until the timer and random numbers are displayed. | Numbers displayed in the console are clearly formatted and the timer digits displayed to the left of the console are large and stand out. | ✅ Pass |
-| “As a user, I want to input equations easily” | Follow the instructions, once a target number has been generated the built-in keypad will appear. Click the keypad buttons and see the numbers/operators appear in the input box. | Keypad input is smooth, responsive and displays the correct output into the corret area. 2| ✅ Pass |
-| “As a user, I want feedback on results” | Once the game is in play (after the start game button has been clicked) the user can input equations via the keypad. If an equation is successful the result will appear at the bottom of the console else the console will display an error message. | Console updates with results, striked out used numbers and messages (error, win/lose). | ✅ Pass |
-| “As a user, I want to play again quickly” | Click on the play again button which displays the home page so a difficulty level can be selected for a new game. | The window is reloaded, clearing all existing DOM elements and displays the PLAY? text| ✅ Pass |
-| “As a user, I want to be prevented from entering invalid equations” | Use the keypad to enter invalid equations | The console displays an error message, the user is able to continue the game without it crashing. | ✅ Pass |
+| As a new user, I want to create an account so I can join the Social Fitness community |	Submit signup form with valid details |	Account is created and user is logged in or redirected to login	| ✅ Pass |
+| As a new user, I want to be warned if my username already exists | Attempt signup with duplicate username |	Validation error is displayed and account is not created | NOT YET |	
+| As a new user, I want password validation so my account is secure	| Enter weak or mismatched passwords	| Clear validation message is shown and form is rejected | ✅ Pass  |	
+| As a user, I want to log in so I can access my profile and posts	| Enter valid login credentials | User is authenticated and redirected to Social Feed | ✅ Pass |	
+| As a user, I want to be notified if login details are incorrect |	Enter invalid login credentials| Error message is displayed and login fails	| ✅ Pass  |
+| As a logged-in user, I want to create a post so I can share my workouts |	Submit a post with image and details |	Post appears on feed and profile | ✅ Pass  |	
+| As a logged-in user, I want optional workout fields so I’m not forced to enter extra data	Create post without workout/intensity |	Post still submits successfully	| ✅ Pass |
+| As a user, I want to delete my own posts so I can manage my content | Click delete on a post I created |	Post is removed from database and UI | ✅ Pass  |
+| As a user, I should not be able to delete another user’s post |	Manually enter delete URL for another user | Access is denied (403/404) and post remains | ✅ Pass  |
+| As a user, I want to comment on posts to interact with others | 	Add a valid comment	Comment displays under the correct post	 | ✅ Pass  | 
+| As a user, I want to edit my own comments	Edit an existing comment | 	Updated comment saves and displays correctly |  | 
+| As a user, I should not edit other users’ comments |	Enter another user’s comment edit URL |	Access denied and comment unchanged	| ✅ Pass  |
+| As a user, I want to like posts to show engagement | Click like button	Heart icon changes and like count increases	| ✅ Pass   |
+| As a user, I want to unlike posts  | 	Click liked heart again	Heart icon reverts and like count decreases	 | ✅ Pass  | 
+| As a user, I should not be able to like a post multiple times	Attempt repeated likes	Only one like per user per post is stored	
+| As a user, I want responsive navigation on smaller screens  | 	Use hamburger menu on mobile view  | Navbar collapses and links remain usable  | ✅ Pass  | 	
+| As a user, I want images to scale correctly on all devices  |	View feed on mobile screen	Images remain within container and do not overflow |  ✅ Pass  | 
+| As a user, I want to see a helpful 404 page when a page doesn’t exist |	Visit invalid URL |	Custom styled 404 page displays with navigation options | ✅ Pass  | 
