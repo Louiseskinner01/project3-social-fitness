@@ -13,23 +13,23 @@
   <small class="text-muted">
     Posted by {{ post.user.username }} on {{ post.created_at }}
   </small>
-  <p class="mt-3"><strong>Caption:</strong>{{ post.caption }}</p>
+  <p class="mt-3"><strong>Caption: </strong>{{ post.caption }}</p>
   <p><strong>Workout:</strong> {{ post.workout }}</p>
   <p><strong>Intensity:</strong> {{ post.intensity }}</p>
 
-  <h5>Comments</h5>
+  <p class="mb-3"><strong>Comments</strong></p>
   {% for comment in post.comments.all %}
-  
+
   <p>
     <strong>{{ comment.user.username }}</strong>:
     {{ comment.body }}
     {% if comment.user == user %}
-      <a href="{% url 'comment_edit' comment.id %}">Edit</a>
+    <a href="{% url 'comment_edit' comment.id %}">Edit</a>
     {% endif %}
   </p>
-{% empty %}
- 
-{% endfor %}
+  {% empty %}
+
+  {% endfor %}
 
 
   {% if user.is_authenticated %}
