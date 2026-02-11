@@ -95,3 +95,23 @@ All tests were conducted manually using a combination of Google Chrome DevTools,
 | As a user, I want responsive navigation on smaller screens  | 	Use hamburger menu on mobile view  | Navbar collapses and links remain usable  | ✅ Pass  | 	
 | As a user, I want images to scale correctly on all devices  |	View feed on mobile screen |	Images remain within container and do not overflow |  ✅ Pass  | 
 | As a user, I want to see a helpful 404 page when a page doesn’t exist |	Visit invalid URL |	Custom styled 404 page displays with navigation options | ✅ Pass  | 
+
+
+### Responsiveness
+Google Chrome DevTools was used extensively to simulate various device viewports, including popular smartphones, tablets, and desktop resolutions. This allowed for a controlled testing environment to verify that the layout, interactive elements, and overall responsiveness behaved as intended under different conditions.
+
+Particular attention was given to:
+
+Responsive design: Ensuring all elements (buttons, images, forms and text) resize and reposition correctly.
+
+Touch interactions: Confirming buttons and inputs respond properly on smaller screens.
+
+Visual consistency: Checking that colours, fonts, containers and spacing remain aligned with the intended design across all viewports.
+
+By testing through Chrome DevTools, I was able to efficiently identify and resolve layout shifts, overlapping elements, and scaling issues before deployment. This ensured the final build delivered a clean, accessible, and user-friendly experience on all supported devices.
+
+
+I've tested my deployed project to check for responsiveness issues.
+
+| Page | Mobile (Portrait) | Mobile (Lanscape)| Tablet | Laptop | Desktop | 
+| --- | --- | --- | --- | ---| --- |
