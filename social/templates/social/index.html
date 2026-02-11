@@ -9,10 +9,11 @@
 {% for post in posts %}
 
 <div style="margin-bottom: 20px;">
-  <img src="{{ post.image.url }}">
-
+  <img src="{{ post.image.url }}" alt="Post image" class="img-fluid d-block mx-auto">
+  <small class="text-muted">
+    Posted by {{ post.user.username }} on {{ post.created_at }}
+  </small>
   <p><strong>Caption:</strong>{{ post.caption }}</p>
-  
   <p><strong>Workout:</strong> {{ post.workout }}</p>
   <p><strong>Intensity:</strong> {{ post.intensity }}</p>
 <hr>
@@ -29,7 +30,6 @@
   <p>No comments yet.</p>
 {% endfor %}
 
-  
 
   {% if user.is_authenticated %}
   <form method="POST" action="{% url 'add_comment' post.id %}">
