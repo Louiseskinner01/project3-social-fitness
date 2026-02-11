@@ -122,3 +122,27 @@ I've tested my deployed project to check for responsiveness issues.
 | Edit Comment|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
 | Login|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
 |Sign up|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+
+
+## Testing Summaries 
+
+### Cross-Browser Compatatbility
+
+To ensure a consistent and accessible user experience across all devices and browsers, the project was thoroughly tested using Google Chrome DevTools. This allowed emulation of multiple devices (iPhone, Samsung Galaxy, iPad, Surface Duo, etc.) and responsive breakpoints to verify that all layout, interaction, and orientation features behaved correctly.
+
+Cross-browser compatability testing was performed manually in the following browsers:
+ - Chrome
+ - Firefox
+ - Safari 
+ - Edge
+ - Opera
+
+ Each browser was checked for layout consistency, JavaScript functionality (such as keypad interactivity and timers), and color rendering.
+
+The goal was to confirm that the web app provides the same smooth gameplay and responsive UI on both desktop and mobile environments, regardless of platform or browser engine.
+
+I've tested my deployed project on multiple browsers to check for compatibility issues.
+
+| Page | Chrome | Firefox | Safari | Edge | Opera | Notes
+| --- | --- | --- | --- | --- | --- | --- |
+
