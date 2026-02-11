@@ -51,11 +51,14 @@ def delete_post(request, post_id):
 
     if post.user != request.user:
         return HttpResponseForbidden("You are not allowed to delete this post.")
+    
     if request.method == "POST":
         post.delete()
+        messages.success(request, "Post deleted successfully.")
         return redirect("profile")
 
     return redirect("profile")
+
 
 def signup(request):
     if request.method == "POST":
