@@ -13,12 +13,13 @@
   <small class="text-muted">
     Posted by {{ post.user.username }} on {{ post.created_at }}
   </small>
-  <p><strong>Caption:</strong>{{ post.caption }}</p>
+  <p class="mt-3"><strong>Caption:</strong>{{ post.caption }}</p>
   <p><strong>Workout:</strong> {{ post.workout }}</p>
   <p><strong>Intensity:</strong> {{ post.intensity }}</p>
-<hr>
+
   <h5>Comments</h5>
   {% for comment in post.comments.all %}
+  
   <p>
     <strong>{{ comment.user.username }}</strong>:
     {{ comment.body }}
@@ -27,7 +28,7 @@
     {% endif %}
   </p>
 {% empty %}
-  <p>No comments yet.</p>
+ 
 {% endfor %}
 
 
@@ -35,7 +36,7 @@
   <form method="POST" action="{% url 'add_comment' post.id %}">
     {% csrf_token %}
     <textarea name="body" rows="2" placeholder="Add a comment..." class="form-control" required></textarea>
-    <button type="submit" class="btn btn-primary">Post</button>
+    <button type="submit" class="btn btn-primary mt-2 mb-3">Post</button>
   </form>
   {% else %}
   <p><a href="{% url 'account_login' %}">Log in</a> to comment.</p>
@@ -48,6 +49,7 @@
     {% csrf_token %}
     <button type="submit" class="btn btn-success">Like / Unlike</button>
   </form>
+  <hr>
   {% else %}
   <p><a href="{% url 'account_login' %}">Log in</a> to like.</p>
   {% endif %}
