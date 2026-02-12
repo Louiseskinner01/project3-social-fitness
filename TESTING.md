@@ -115,13 +115,13 @@ I've tested my deployed project to check for responsiveness issues.
 
 | Page | Mobile | Tablet | Laptop | Desktop | 
 | --- | --- | --- | ---| --- |
-| Home|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
-| Social Feed|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
-| My profile|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
-| Create Post|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| Home|![screenshot](documentation/responsiveness/mobile/home1.png)<br> ![screenshot](documentation/responsiveness/mobile/home2.png)<br> ![screenshot](documentation/responsiveness/mobile/home3.png)| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| Social Feed|![screenshot](documentation/responsiveness/mobile/social-feed1.png)<br> ![screenshot](documentation/responsiveness/mobile/social-feed2.png)| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| My profile|![screenshot](documentation/responsiveness/mobile/my-profile1.png)<br> ![screenshot](documentation/responsiveness/mobile/my-profile2.png)| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| Create Post|![screenshot](documentation/responsiveness/mobile/create-post.png)| ![screenshot]()| ![screenshot]()| ![screenshot]()|
 | Edit Comment|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
-| Login|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
-|Sign up|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| Login|![screenshot](documentation/responsiveness/mobile/login.png)| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+|Sign up|![screenshot](documentation/responsiveness/mobile/sign-up.png)| ![screenshot]()| ![screenshot]()| ![screenshot]()|
 
 
 ## Testing Summaries 
@@ -145,4 +145,11 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 | Page | Chrome | Firefox | Safari | Edge | Opera | Notes
 | --- | --- | --- | --- | --- | --- | --- |
+| Home|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| Social Feed|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| My profile|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| Create Post|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| Edit Comment|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+| Login|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
+|Sign up|![screenshot]()| ![screenshot]()| ![screenshot]()| ![screenshot]()|
 
