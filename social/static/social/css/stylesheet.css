@@ -85,6 +85,12 @@ main img {
   transform: scale(1.2);
 }
 
+#id_body {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid whitesmoke;
+}
+
 @media (min-width: 992px) {
   .large-screen {
     font-size: 24px;
