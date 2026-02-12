@@ -42,12 +42,18 @@
   <p><a href="{% url 'account_login' %}">Log in</a> to comment.</p>
   {% endif %}
 
-  <p><strong>{{ post.likes.count }}</strong> likes</p>
-
+  {# this is an example from ChatGPT to enable the user to like/unlike a comment #}
   {% if user.is_authenticated %}
-  <form method="POST" action="{% url 'toggle_like' post.id %}" style="display:inline;">
+  <form method="POST" action="{% url 'toggle_like' post.id %}">
     {% csrf_token %}
-    <button type="submit" class="btn btn-success">Like / Unlike</button>
+    <button type="submit" class="btn btn-link p-0 like-btn">
+      {% if user in post.likes.all %}
+        <i class="bi bi-heart-fill text-danger"></i>
+      {% else %}
+        <i class="bi bi-heart"></i>
+      {% endif %}
+    </button>
+    <p><strong>{{ post.likes.count }}</strong> likes</p>
   </form>
   <hr>
   {% else %}
