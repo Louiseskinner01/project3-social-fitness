@@ -84,3 +84,15 @@ main img {
 .like-btn:hover i {
   transform: scale(1.2);
 }
+
+@media (min-width: 992px) {
+  .large-screen {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .large-screen {
+    font-size: 32px;
+  }
+}
