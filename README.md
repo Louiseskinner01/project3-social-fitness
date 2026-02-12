@@ -360,17 +360,8 @@ There are no remaining major differences between the local version when compared
 | [w3schools](https://www.w3schools.com/) | Help with form validation, display:block/none vs visibiliy: visible/hidden |
 | [Bootstrap](https://getbootstrap.com) | Various components / responsive front-end framework |
 | [Django](https://django.com) | Various components such as forms, loops and reusable templates |
-| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations:<br>**Example 1**`Posted by {{ post.user.username }} on {{ post.created_at }}` <br>**Example 2** `(onsubmit="return confirm('Are you sure you want to delete this post? ‘)` <br>**Example 3** `<form method="POST" action="{% url 'toggle_like' post.id %}">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-link p-0 like-btn">
-      {% if user in post.likes.all %}
-        <i class="bi bi-heart-fill text-danger"></i>
-      {% else %}
-        <i class="bi bi-heart"></i>
-      {% endif %}
-    </button>
-    <span>{{ post.likes.count }}</span>
-  </form>` |
+| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations:<br>**Example 1**`Posted by {{ post.user.username }} on {{ post.created_at }}` <br>**Example 2** `(onsubmit="return confirm('Are you sure you want to delete this post? ‘)` <br>**Example 3** `<form method="POST" action="{% url 'toggle_like' post.id %}"> {% csrf_token %}
+<button type="submit" class="btn btn-link p-0 like-btn"> {% if user in post.likes.all %} <i class="bi bi-heart-fill text-danger"></i> {% else %} <i class="bi bi-heart"></i> {% endif %} </button> <span>{{ post.likes.count }}</span> </form>` |
 
 ### Media
 - Image Compression
