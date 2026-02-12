@@ -163,8 +163,16 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 
-| Directory | File | URL | 
-| --- | --- | --- | 
+| Directory | Screenshot | Passed |
+| --- | --- | --- |
+| Home |![screenshot](documentation/validation/html/html.png) | ✅ Pass |
+| Social Feed |![screenshot](documentation/validation/html/social-feed.png) | ✅ Pass |
+| My Profile |![screenshot](documentation/validation/html/my-profile.png) | ✅ Pass |
+| Create Post |![screenshot](documentation/validation/html/create-post.png) | ✅ Pass |
+| Edit Comment |![screenshot](documentation/validation/html/edit-comment.png) | ✅ Pass |
+| Login |![screenshot](documentation/validation/html/login.png) | ✅ Pass |
+| Sign Up |![screenshot](documentation/validation/html/signup.png) | ✅ Pass |
+| 404 |![screenshot](documentation/validation/html/404.png) | ✅ Pass |
 
 
 #### CSS
