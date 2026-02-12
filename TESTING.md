@@ -142,9 +142,10 @@ Cross-browser compatability testing was performed manually in the following brow
 The goal was to confirm that the web app provides the same smooth gameplay and responsive UI on both desktop and mobile environments, regardless of platform or browser engine.
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
+**Summary**: The Social Fitness web application displays without any issues across all major web browsers.
 
-| Page | Chrome | Firefox | Safari | Edge | Opera | Notes
-| --- | --- | --- | --- | --- | --- | --- |
+| Page | Chrome | Firefox | Safari | Edge | Opera | 
+| --- | --- | --- | --- | --- | --- | 
 | Home|![screenshot](documentation/browser-compatibility/chrome/home.png)| ![screenshot](documentation/browser-compatibility/firefox/home.png)| ![screenshot](documentation/browser-compatibility/safari/home.png)| ![screenshot](documentation/browser-compatibility/edge/home.png)| ![screenshot](documentation/browser-compatibility/opera/home.png)|
 | Social Feed|![screenshot](documentation/browser-compatibility/chrome/scoial-feed1.png) <br> ![screenshot](documentation/browser-compatibility/chrome/social-feed2.png)| ![screenshot](documentation/browser-compatibility/firefox/social-feed1.png) <br> ![screenshot](documentation/browser-compatibility/firefox/social-feed2.png)| ![screenshot](documentation/browser-compatibility/safari/social-feed1.png) <br> ![screenshot](documentation/browser-compatibility/safari/social-feed2.png)| ![screenshot](documentation/browser-compatibility/edge/social-feed1.png) <br> ![screenshot](documentation/browser-compatibility/edge/social-feed2.png)|  ![screenshot](documentation/browser-compatibility/opera/social-feed1.png) <br> ![screenshot](documentation/browser-compatibility/opera/social-feed2.png)|
 | My profile|![screenshot](documentation/browser-compatibility/chrome/my-profile1.png) <br> ![screenshot](documentation/browser-compatibility/chrome/my-profile2.png)| ![screenshot](documentation/browser-compatibility/firefox/profile1.png) <br> ![screenshot](documentation/browser-compatibility/firefox/profile2.png)| ![screenshot](documentation/browser-compatibility/safari/profile1.png) <br> ![screenshot](documentation/browser-compatibility/safari/profile2.png)| ![screenshot](documentation/browser-compatibility/edge/profile1.png) <br> ![screenshot](documentation/browser-compatibility/edge/profile2.png)| ![screenshot](documentation/browser-compatibility/opera/profile1.png) <br> ![screenshot](documentation/browser-compatibility/opera/profile2.png)|
@@ -154,3 +155,40 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Sign up|![screenshot](documentation/browser-compatibility/chrome/signup.png)| ![screenshot](documentation/browser-compatibility/firefox/signup.png)| ![screenshot](documentation/browser-compatibility/safari/signup.png)| ![screenshot](documentation/browser-compatibility/edge/signup.png)|  ![screenshot](documentation/browser-compatibility/opera/signup.png)|
 | 404|![screenshot](documentation/browser-compatibility/chrome/404.png)| ![screenshot](documentation/browser-compatibility/firefox/404.png)| ![screenshot](documentation/browser-compatibility/opera/404.png)| ![screenshot](documentation/browser-compatibility/edge/404.png)| ![screenshot](documentation/browser-compatibility/opera/404.png)|
 
+
+
+### Validation summary
+
+#### HTML
+
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+
+| Directory | File | URL | 
+| --- | --- | --- | 
+
+
+#### CSS
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
+
+| Directory | File | URL | 
+| --- | --- | --- | 
+
+
+## Performance 
+### Lighthouse Performance
+
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues. Some warnings are outside of my control, and mobile results tend to be lower than desktop.
+
+| Page | Mobile | Desktop |  Notes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| --- | --- | --- | --- |
+
+
+### Accessibility Summary 
+ 
+| Test                                                             | Result |
+| ---------------------------------------------------------------- | ------ |
+| The web app follows the WCAG (web content accessibility guidelines) 2.1 standards                          |  ✅     |
+| Text size and spacing adjustable                                 | ✅      |
+| Interactive elements clearly labeled and accessible via keyboard | ✅      |
+| ARIA labels provided                       | ✅      |
+| Orientation and responsiveness maintained for screen readers     | ✅      |
