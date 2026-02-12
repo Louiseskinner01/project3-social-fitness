@@ -179,7 +179,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
 | Directory | File | URL | 
-| --- | --- | --- | 
+| styleshet.css | ![screenshot](documentation/validation/css/css/css.png) | ✅ Pass | 
 
 
 ## Performance 
