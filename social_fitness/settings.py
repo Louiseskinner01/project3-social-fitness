@@ -135,3 +135,4 @@ MEDIA_ROOT = BASE_DIR / "media"
 # Authentication redirects
 LOGIN_REDIRECT_URL = "/feed/"       # on login user is directed to feed
 LOGOUT_REDIRECT_URL = "/"           # after logout user is directed to the landing page
+
