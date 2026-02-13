@@ -1,7 +1,9 @@
 asgiref==3.10.0
 astroid==4.0.4
+bleach==6.3.0
 dill==0.4.1
 Django==4.2.26
+django-summernote==0.8.20.0
 gunicorn==25.1.0
 isort==7.0.0
 mccabe==0.7.0
@@ -12,3 +14,4 @@ pylint==4.0.4
 pys==0.0.14.post4
 sqlparse==0.5.3
 tomlkit==0.14.0
+webencodings==0.5.1
