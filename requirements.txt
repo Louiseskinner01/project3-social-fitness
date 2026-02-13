@@ -15,3 +15,4 @@ pys==0.0.14.post4
 sqlparse==0.5.3
 tomlkit==0.14.0
 webencodings==0.5.1
+whitenoise==6.11.0
