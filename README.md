@@ -229,7 +229,6 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ### GitHub Projects
 
-
 [GitHub Projects](https://www.github.com/Louiseskinner01/project2-the-countdown/projects) served as an Agile tool for this project. Through it, EPICs, User Stories, issues/bugs, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
 
 | Stage   | Screenshot |

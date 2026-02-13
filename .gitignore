@@ -8,4 +8,4 @@ node_modules/
 .github/
 *.sqlite3
 *.__pyc
-.venv
+.venv/

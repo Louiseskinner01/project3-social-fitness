@@ -200,3 +200,15 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Interactive elements clearly labeled and accessible via keyboard | ✅      |
 | ARIA labels provided                       | ✅      |
 | Orientation and responsiveness maintained for screen readers     | ✅      |
+
+
+
+
+## Bugs / Fixes
+
+| Issue      | Cause  | Solution    | Status  |
+| --------------------------------------------- | ------------------------------ | -------------------------- | ------- |
+
+### Known/Existing Issues
+| Issue                 | Screenshot |
+| --------------------- | --- | 
