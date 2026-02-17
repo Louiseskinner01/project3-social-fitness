@@ -1,4 +1,6 @@
 {% extends "social/base.html" %}
+{% load static %}
+{% load cloudinary %}
 
 {% block title %}Social Feed{% endblock %}
 
@@ -9,7 +11,7 @@
 {% for post in posts %}
 
 <div style="margin-bottom: 20px;">
-  <img src="{{ post.image.url }}" alt="Post image" class="img-fluid d-block mx-auto">
+  {% cloudinary post.image width=300 height=300 crop="fill" class="card-img-top" %}
   <small class="text-muted">
     Posted by {{ post.user.username }} on {{ post.created_at }}
   </small>

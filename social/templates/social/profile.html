@@ -1,4 +1,6 @@
 {% extends "social/base.html" %}
+{% load static %}
+{% load cloudinary %}
 
 {% block content %}
   <h2>My Posts</h2>
@@ -6,7 +8,7 @@
   {% if posts %}
     {% for post in posts %}
       <div style="margin-bottom: 20px;">
-        <img src="{{ post.image.url }}" alt="Post image" class="img-fluid d-block mx-auto">
+        {% cloudinary post.image width=300 height=300 crop="fill" class="card-img-top" %}
 
         {% if post.caption %}
           <p>{{ post.caption }}</p>
