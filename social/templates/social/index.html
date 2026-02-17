@@ -11,7 +11,11 @@
 {% for post in posts %}
 
 <div style="margin-bottom: 20px;">
+
+{% if post.image %}
   {% cloudinary post.image width=300 height=300 crop="fill" class="card-img-top" %}
+{% endif %}
+
   <small class="text-muted">
     Posted by {{ post.user.username }} on {{ post.created_at }}
   </small>
