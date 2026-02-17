@@ -29,9 +29,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-7bbs@i96_dz##g6lm@p7+$p2k8v4h0uqx9z3&b$kr9p8je#08h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".herokuapp.com"]
+ALLOWED_HOSTS = ["localhost", 
+                 "127.0.0.1", 
+                 ".herokuapp.com",]
 
 # Application definition
 INSTALLED_APPS = [
@@ -89,11 +91,6 @@ DATABASES = {
 }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
-"""
-
-DATABASES = {
     "default": dj_database_url.config(
         default="sqlite:///db.sqlite3",
         conn_max_age=600,
@@ -101,6 +98,19 @@ DATABASES = {
     )
 }
 
+"""
+
+if "DATABASE_URL" in os.environ:
+    DATABASES = {
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
