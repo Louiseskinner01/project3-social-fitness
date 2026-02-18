@@ -15,7 +15,7 @@ The application focuses on simplicity, accessibility, and accountability, provid
 **Site Mockups**
 ![screenshot](documentation/images/site-mockup.png)
 
-source: [project3-social-fitness amiresponsive](https://ui.dev/amiresponsive?url=https://louiseskinner01.github.io/project3-social-fitness)
+source: [project3-social-fitness amiresponsive](https://ui.dev/amiresponsive?url=https://social-fitness-330c9c90ea8f.herokuapp.com/)
 
 ### The 5 Planes of UX
 #### 1. Strategy
@@ -93,12 +93,23 @@ A restrained colour palette and standardised button styles were selected to redu
 - Login
 - Logout
 
-![screenshot](documentation/images/coolors-colour-theme.png)
+![screenshot](documentation/images/bs-colour-pallet.png)
 
 ### Typography
 
+The typography was selected to reflect both the futuristic arcade feel of the game and the clarity needed for puzzle-solving. The fonts have been imported from Google Fonts and have been used in the following way:
 
+Main Font – Zalando Sans Expanded (Sans-serif)
+A modern, clean, and highly legible sans-serif typeface with a slightly wider character width, giving it an open and contemporary feel. Ideal for headings, branding, and user interfaces where clarity and a bold presence are needed.
 
+Sub Font – Poiret One (Sans-serif)
+A decorative, geometric sans-serif font with a light and elegant style, featuring rounded, art-deco-inspired curves. Perfect for accents, subheadings, or elements that need a touch of personality and sophistication.
+
+Together, these fonts combine a clean, clear and simple web application that offers a nice style and easy readibility.
+
+## Design
+Before physically building the web pages it was important to design (model) the database to understand how data will flow when the user is interacting with the web application. Below is an ERD (entity relationship diagram) screen shot modeling the database.
+![screenshot](documentation/images/erd.png)
 ## Wireframes
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
