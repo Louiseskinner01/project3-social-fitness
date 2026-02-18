@@ -47,10 +47,13 @@ margin-left: 100px;
 }
 
 footer{
-        padding-top: 10px;
         background-color: rgb(119, 119, 251);
         margin-top: 20px;
+        color: white;
+        font-size: larger;
 }
+
+
     
 
 main img {
