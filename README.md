@@ -13,9 +13,9 @@ Social Fitness is a community-driven web application designed to motivate users 
 The application focuses on simplicity, accessibility, and accountability, providing a space where users can document their fitness journey, interact with a supportive community, and manage their own content through personalised profiles.
 
 **Site Mockups**
-![screenshot](documentation/images/site-mockup.png)
+![screenshot](documentation/images/site-mockups.png)
 
-source: [project3-social-fitness amiresponsive](https://ui.dev/amiresponsive?url=https://social-fitness-330c9c90ea8f.herokuapp.com/)
+source: [project3-social-fitness amiresponsive](https://ui.dev/amiresponsive?url=https://social-fitness-330c9c90ea8f.herokuapp.com/feed/)
 
 ### The 5 Planes of UX
 #### 1. Strategy
