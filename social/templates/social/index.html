@@ -9,11 +9,10 @@
 
 {% if posts %}
 {% for post in posts %}
-
 <div style="margin-bottom: 20px;">
 
 {% if post.image %}
-  {% cloudinary post.image width=500 crop="limit" class="post-image mb-3" alt=post.caption %}
+  {% cloudinary post.image width=500 crop="limit" class="post-image mb-3" alt=post.caption|default:"Post image" %}
 {% endif %}
 
   <small class="text-muted mt-2 mb-2">
