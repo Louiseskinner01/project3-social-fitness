@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 class Post(models.Model):
@@ -19,7 +20,7 @@ class Post(models.Model):
         ("hard", "HARD")
     ]
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts")
-    image = models.ImageField(upload_to="posts/")
+    image = CloudinaryField('image', blank=True, null=True)
     caption = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     workout = models.CharField(max_length=20, choices=WORKOUT, blank=True)
