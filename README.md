@@ -110,6 +110,32 @@ Together, these fonts combine a clean, clear and simple web application that off
 ## Design
 Before physically building the web pages it was important to design (model) the database to understand how data will flow when the user is interacting with the web application. Below is an ERD (entity relationship diagram) screen shot modeling the database.
 ![screenshot](documentation/images/erd.png)
+
+Some models have been customised to enhance the users experience. This has been achiveed by adding the following to the following fields and choices to the Post model:
+**Fields**
+    workout = models.CharField(max_length=20, choices=WORKOUT, blank=True)
+    intensity = models.CharField(max_length=20, choices=INTENSITY, blank=True)
+**Choices**
+ WORKOUT = [
+        ("run", "RUN"),
+        ("cycle", "CYCLE"),
+        ("row", "ROW"),
+        ("swim", "SWIM"),
+        ("yoga", "YOGA"),
+        ("pilates", "PILATES"),
+        ("functional strength", "FUNCTIONAL STRENGTH"),
+        ("other", "OTHER")
+    ]
+    INTENSITY = [
+        ("easy", "EASY"),
+        ("medium", "MEDIUM"),
+        ("hard", "HARD")
+    ]
+
+
+
+
+
 ## Wireframes
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
