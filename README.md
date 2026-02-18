@@ -113,27 +113,25 @@ Before physically building the web pages it was important to design (model) the 
 
 Some models have been customised to enhance the users experience. This has been achiveed by adding the following to the following fields and choices to the Post model:
 **Fields**
-    workout = models.CharField(max_length=20, choices=WORKOUT, blank=True)
+    workout = models.CharField(max_length=20, choices=WORKOUT, blank=True)<br>
     intensity = models.CharField(max_length=20, choices=INTENSITY, blank=True)
+    <br>
 **Choices**
- WORKOUT = [
-        ("run", "RUN"),
-        ("cycle", "CYCLE"),
-        ("row", "ROW"),
-        ("swim", "SWIM"),
-        ("yoga", "YOGA"),
-        ("pilates", "PILATES"),
-        ("functional strength", "FUNCTIONAL STRENGTH"),
-        ("other", "OTHER")
-    ]
-    INTENSITY = [
-        ("easy", "EASY"),
-        ("medium", "MEDIUM"),
-        ("hard", "HARD")
-    ]
-
-
-
+ WORKOUT = [<br>
+        ("run", "RUN"),<br>
+        ("cycle", "CYCLE"),<br>
+        ("row", "ROW"),<br>
+        ("swim", "SWIM"),<br>
+        ("yoga", "YOGA"),<br>
+        ("pilates", "PILATES"),<br>
+        ("functional strength", "FUNCTIONAL STRENGTH"),<br>
+        ("other", "OTHER")<br>
+    ]<br>
+    INTENSITY = [<br>
+        ("easy", "EASY"),<br>
+        ("medium", "MEDIUM"),<br>
+        ("hard", "HARD")<br>
+    ]<br>
 
 
 ## Wireframes
