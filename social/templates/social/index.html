@@ -13,10 +13,10 @@
 <div style="margin-bottom: 20px;">
 
 {% if post.image %}
-  {% cloudinary post.image width=350 crop="limit" class="post-image mb-3" %}
+  {% cloudinary post.image width=500 crop="limit" class="post-image mb-3" %}
 {% endif %}
 
-  <small class="text-muted mt-3">
+  <small class="text-muted mt-2 mb-2">
     Posted by {{ post.user.username }} on {{ post.created_at }}
   </small>
   <p><strong>Caption: </strong>{{ post.caption }}</p>
