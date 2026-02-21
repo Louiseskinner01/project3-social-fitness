@@ -159,7 +159,16 @@ def toggle_like(request, post_id):
 
 def lighthouse_feed(request):
     posts = Post.objects.all().order_by("-created_at")[:6]
-    return render(request, "social/index.html", {"posts": posts})
+
+    return render(
+        request,
+        "social/index.html",
+        {
+            "posts": posts,
+            "is_paginated": False,
+            "page_obj": None,
+        },
+    )
 
 def lighthouse_form(request):
     form = PostForm()
