@@ -18,9 +18,9 @@ All tests were conducted manually using a combination of Google Chrome DevTools,
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | **Manual Testing**        | Each feature and button was manually tested to verify correct functionality. This included checking form submissions, button click responses, login/signup authentication and image upload. |  Google Chrome                                                                                                  |
 | **Responsive Testing**    | Tested using Chrome DevTools’ built-in device emulation. Ensured the layout adapts correctly to different screen widths and orientations.                                          | Chrome DevTools                                                                                                                           |
-| **Cross-Browser Compatability Testing** | Tested in multiple browsers to ensure consistent design, color rendering, and interactivity.                                                                                       | Chrome, Firefox, Safari, Edge                                                                                                     |
+| **Cross-Browser Compatibility Testing** | Tested in multiple browsers to ensure consistent design, colour rendering, and interactivity.                                                                                       | Chrome, Firefox, Safari, Edge                                                                                                     |
 | **Validation Testing**    | Used validation tools to check that the HTML and CSS are free from syntax errors and follow best practices.                                                           | [W3C HTML Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) |
-| **Accessibility Testing** | Checked color contrast, font readability, tab navigation, and proper use of ARIA and semantic tags where applicable.                                                               | Chrome Lighthouse, manual checks                                                                                                          |
+| **Accessibility Testing** | Checked colour contrast, font readability, tab navigation, and proper use of ARIA and semantic tags where applicable.                                                               | Chrome Lighthouse, manual checks                                                                                                          |
 | **Performance Testing**   | Evaluated page load speed and responsiveness using Chrome Lighthouse.                                                                                                              | Chrome DevTools  Lighthouse     
 
 
@@ -38,7 +38,7 @@ All tests were conducted manually using a combination of Google Chrome DevTools,
 | Signup (duplicate username)	| Attempt to sign up using an existing username	| Form displays error and prevents account creation		| ✅ Works | ![screenshot]() |
 | Signup (password mismatch) |	Enter two different passwords in password fields | Validation error shown and account not created | ✅ Works | ![screenshot](documentation/manual-testing/Screenpassword-mismatch.png) |	
 | Signup (weak password) | Enter a weak password e.g l1 or 123 | Should display an error message stating that the password is weak and what the requirements are for a strong and successful password  | ✅ Works | ![screenshot](documentation/manual-testing/week-password.png) |	
-|Brute-force URL testing | Visit restricted pages without being logged in as a aunthenticated user | Should send user to login page | ✅ Works | ![screenshot](documentation/manual-testing/brute-force1.png) <br> ![screenshot](documentation/manual-testing/brute-force2.png)|
+|Brute-force URL testing | Visit restricted pages without being logged in as a authenticated user | Should send user to login page | ✅ Works | ![screenshot](documentation/manual-testing/brute-force1.png) <br> ![screenshot](documentation/manual-testing/brute-force2.png)|
 | Navigation (Burger-icon)     | Changed the screen size to viarious sizes and also clicked on the burger icon when testing on mobile and tablet devices.   | Appears when the screen size is small and disappears (expanding into a full navigation bar) when the screen is large. | ✅ Works          | **Navbar expand** ![screenshot](documentation/manual-testing/navbar-expand.png)<br> **Navbar toggle** ![screenshot](documentation/manual-testing/navbar-toggle.png)<br> **Navbar toggle expand** ![screenshot](documentation/manual-testing/navbar-toggle-expand.png) |
 | Login (valid)                       | Log in with correct username and password                        | User is authenticated and redirected to Social Feed                      |   ✅ Works        | ![screenshot](documentation/manual-testing/login.png) |
 | Login (invalid)                     | Attempt login with incorrect password                            | Error message shown and login denied                                     |    ✅ Works        | ![screenshot](documentation/manual-testing/incorrect-password.png) |
@@ -46,7 +46,7 @@ All tests were conducted manually using a combination of Google Chrome DevTools,
 | Create post (valid)                 | Submit new post with image + caption/workout/intensity           | Post is saved and displays on Feed and Profile                           |   ✅ Works         | ![screenshot](documentation/manual-testing/create-post1.png) <br> ![screenshot](documentation/manual-testing/create-post2.png) <br> ![screenshot](documentation/manual-testing/create-post3.png)|
 | Create post (missing image)         | Submit post form without selecting an image                      | Form validation error displayed; post not created                        |  ✅ Works          | ![screenshot](documentation/manual-testing/create-post-without-image.png) |
 | Post custom fields optional         | Create post without workout/intensity                            | Post still creates successfully; optional fields remain blank            |     ✅ Works          | ![screenshot](documentation/manual-testing/custom-fields.png) |
-| Delete own post                     | Delete a post created by the logged-in user                      | The user will be promted with an alert message asking if they're sure they want to delete the post. If the user confirms OK and the post is a successfully deleted, the user should be presented with an alert                       |     ✅ Works          | **Before deletion**![screenshot](documentation/manual-testing/delete0.png)<br> **Confirm deletion** ![screenshot](documentation/manual-testing/delete1.png) **Successful deletion** ![screenshot](documentation/manual-testing/delete2.png) |
+| Delete own post                     | Delete a post created by the logged-in user                      | The user will be prompted with an alert message asking if they're sure they want to delete the post. If the user confirms OK and the post is a successfully deleted, the user should be presented with an alert                       |     ✅ Works          | **Before deletion**![screenshot](documentation/manual-testing/delete0.png)<br> **Confirm deletion** ![screenshot](documentation/manual-testing/delete1.png) **Successful deletion** ![screenshot](documentation/manual-testing/delete2.png) |
 | Delete other user post (defensive)  | Manually enter `/posts/<id>/delete/` for another user’s post     | Action denied (403/blocked); post remains                                |    ✅ Works           | ![screenshot](documentation/manual-testing/delete-other-user.png) |
 | Add comment (valid)                 | Add a comment under a post while logged in                       | Comment saves and displays beneath the correct post                      |   ✅ Works            | ![screenshot](documentation/manual-testing/add-comment1.png) <br> ![screenshot](documentation/manual-testing/add-comment2.png)|
 | Add comment (logged out)            | Try to add comment while logged out                              | User redirected to login to prevent them from commenting                    |   ✅ Works            | ![screenshot](documentation/manual-testing/login-page.png) |
@@ -126,7 +126,7 @@ I've tested my deployed project to check for responsiveness issues.
 
 ## Testing Summaries 
 
-### Cross-Browser Compatatbility
+### Cross-Browser Compatibility
 
 To ensure a consistent and accessible user experience across all devices and browsers, the project was thoroughly tested using Google Chrome DevTools. This allowed emulation of multiple devices (iPhone, Samsung Galaxy, iPad, Surface Duo, etc.) and responsive breakpoints to verify that all layout, interaction, and orientation features behaved correctly.
 
@@ -137,7 +137,7 @@ Cross-browser compatability testing was performed manually in the following brow
  - Edge
  - Opera
 
- Each browser was checked for layout consistency, JavaScript functionality (such as keypad interactivity and timers), and color rendering.
+ Each browser was checked for layout consistency, JavaScript functionality (such as keypad interactivity and timers), and colour rendering.
 
 The goal was to confirm that the web app provides the same smooth gameplay and responsive UI on both desktop and mobile environments, regardless of platform or browser engine.
 
@@ -192,14 +192,14 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
 | Directory | File | URL | 
-| styleshet.css | ![screenshot](documentation/validation/css/css/css.png) | ✅ Pass | 
+| stylesheet.css | ![screenshot](documentation/validation/css/css/css.png) | ✅ Pass | 
 
 
 ## Performance 
 ### Performance Testing
 
-I've tested my deployed project using the Page Speed Insights tool to check for any major issues. I chose this tool over Lighthouse testing which is my preferred auditting tool because I was having some issues that I was unable to fix. The pages that were tested were public pages, please see the results below. 
-- Note: My web application is built using Django and all pages extend from thr base.html template which proiveds each page with a very similar design and look.
+I've tested my deployed project using the Page Speed Insights tool to check for any major issues. I chose this tool over Lighthouse testing which is my preferred auditing tool because I was having some issues that I was unable to fix. The pages that were tested were public pages, please see the results below. 
+- Note: My web application is built using Django and all pages extend from the base.html template which provides each page with a very similar design and look.
 
 
 **Page Speed Insights**
@@ -209,7 +209,7 @@ I've tested my deployed project using the Page Speed Insights tool to check for 
 | login | ![screenshot](documentation/performance-testing/login.png) | 
 | Signup | ![screenshot](documentation/performance-testing/sign-up.png) | 
 
-I have also included the error mesages from the lighthouse testing tool for anyone who may be able to help solve the error.
+I have also included the error messeges from the lighthouse testing tool for anyone who may be able to help solve the error.
 
 **lighthouse Performance Error**
 | Page | Mobile |  
@@ -229,12 +229,11 @@ I have also included the error mesages from the lighthouse testing tool for anyo
 
 
 
-
 ## Bugs / Fixes
 
-| Issue      | Cause  | Solution    | Status  |
-| --------------------------------------------- | ------------------------------ | -------------------------- | ------- |
+There are no know bugs or issues with the Social Fitness web application.
 
 ### Known/Existing Issues
 | Issue                 | Screenshot |
 | --------------------- | --- | 
+| Lighthouse performance testing | ![screenshot](documentation/performance-testing/lighthouse-performance-error.png) | 
