@@ -196,12 +196,25 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 
 ## Performance 
-### Lighthouse Performance
+### Performance Testing
 
-I've tested my deployed project using the Lighthouse Audit tool to check for any major issues. Some warnings are outside of my control, and mobile results tend to be lower than desktop.
+I've tested my deployed project using the Page Speed Insights tool to check for any major issues. I chose this tool over Lighthouse testing which is my preferred auditting tool because I was having some issues that I was unable to fix. The pages that were tested were public pages, please see the results below. 
+- Note: My web application is built using Django and all pages extend from thr base.html template which proiveds each page with a very similar design and look.
 
-| Page | Mobile | Desktop |  Notes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| --- | --- | --- | --- |
+
+**Page Speed Insights**
+| Page | Mobile |  
+| --- | --- | 
+| Home | ![screenshot](documentation/performance-testing/home.png) |  |
+| login | ![screenshot](documentation/performance-testing/login.png) | 
+| Signup | ![screenshot](documentation/performance-testing/sign-up.png) | 
+
+I have also included the error mesages from the lighthouse testing tool for anyone who may be able to help solve the error.
+
+**lighthouse Performance Error**
+| Page | Mobile |  
+| --- | --- | 
+| All pages | ![screenshot](documentation/performance-testing/lighthouse-performance-error.png) |
 
 
 ### Accessibility Summary 
