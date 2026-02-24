@@ -241,6 +241,9 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 **Admin Analytics Dashboard**: Provide administrators with insights into user activity and engagement trends.
 
+**Like/Unlike button**: It would be a good feature improvement to have the like/unlike button stay at the same point in the page rather than take the user to the top of the web page when the button is clicked. 
+
+
 ## Tools & Technologies
 
 | Tool / Tech | Use |
