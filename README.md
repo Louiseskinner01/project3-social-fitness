@@ -105,18 +105,18 @@ A modern, clean, and highly legible sans-serif typeface with a slightly wider ch
 Sub Font – Poiret One (Sans-serif)
 A decorative, geometric sans-serif font with a light and elegant style, featuring rounded, art-deco-inspired curves. Perfect for accents, subheadings, or elements that need a touch of personality and sophistication.
 
-Together, these fonts combine a clean, clear and simple web application that offers a nice style and easy readibility.
+Together, these fonts combine a clean, clear and simple web application that offers a nice style and easy readability.
 
 ## Design
-Before physically building the web pages it was important to design (model) the database to understand how data will flow when the user is interacting with the web application. Below is an ERD (entity relationship diagram) screen shot modeling the database.
+Before physically building the web pages it was important to design (model) the database to understand how data will flow when the user is interacting with the web application. Below is an ERD (entity relationship diagram) screen shot modelling the database.
 ![screenshot](documentation/images/erd.png)
 
-Some models have been customised to enhance the users experience. This has been achiveed by adding the following to the following fields and choices to the Post model:
-**Fields**
+Some models have been customised to enhance the users experience. This has been achieved by adding the following to the following fields and choices to the Post model:<br>
+**Fields**<br>
     workout = models.CharField(max_length=20, choices=WORKOUT, blank=True)<br>
     intensity = models.CharField(max_length=20, choices=INTENSITY, blank=True)
     <br>
-**Choices**
+**Choices**<br>
  WORKOUT = [<br>
         ("run", "RUN"),<br>
         ("cycle", "CYCLE"),<br>
@@ -156,12 +156,12 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 | Target | Expectation | Outcome |
 | --- | --- | --- |
-| As a user | I would like to upload a image | so that I can populate my profile page with images of my workouts. |
+| As a user | I would like to upload an image | so that I can populate my profile page with images of my workouts. |
 | As a user | I want add a caption | so that my posts can be accompanied by a description. |
 | As a user | I would like to add a workout type and an intensity level | to give more meaning to my workout post. |
 | As a user | I would like to create an account | so I can use the social-fitness platform. |
 | As a user | I would like to log in and out out of my account | so my profile is kept safe from non-authenticated users. |
-| As a user | I would like to be able to delete my post | so I have full control of my user profile and what is and isnt displayed. |
+| As a user | I would like to be able to delete my post | so I have full control of my user profile and what is and isn't displayed. |
 | As a user | I would like like to view the main social feed | so I can be inspired by other users. |
 | As a user |  I would like to like posts that other users have posted on the main social feed | so that I can share my interests. |
 | As a user | I would like to comment on other users posts  | so that I can share my thoughts. |
@@ -183,8 +183,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Target | Expectation | Outcome |
 | --- | --- | --- |
 | As a casual user | I want to be able to share my workouts | so that I can enjoy the web application without pressure. |
-| As a competitive user (fitness influencer)| I want to sutilise the app | so that I can inspire other users who are new to fitness. |
-| As a user new to fintess | I want to be able to access a community | so that I can learn and be inspired by fitness content. |
+| As a competitive user (fitness influencer)| I want to utilise the app | so that I can inspire other users who are new to fitness. |
+| As a user new to fitness | I want to be able to access a community | so that I can learn and be inspired by fitness content. |
 
 ## Features
 ### Existing Features
@@ -219,7 +219,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 **Reply to Comments**: Introduce threaded conversations to improve interaction and discussion depth.
 
-**Notifications**: Alert users when their posts receive likes or comments to increase engagement.
+**Notifications**: Alert users when a posts receive likes or comments to increase engagement.
 
 **User Mentions (@username)**: Allow tagging other users within comments to encourage social interaction.
 
@@ -261,7 +261,6 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 
 ## Agile Development Process
-
 ### GitHub Projects
 
 [GitHub Projects](https://www.github.com/Louiseskinner01/project2-the-countdown/projects) served as an Agile tool for this project. Through it, EPICs, User Stories, issues/bugs, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
@@ -282,9 +281,9 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | [![GitHub closed issues](https://img.shields.io/github/issues-closed/Louiseskinner01/project3-social-fitness)](https://www.github.com/Louiseskinner01/project3-social-fitness/issues?q=is%3Aissue+is%3Aclosed) | ![screenshot](documentation/project-board/issues/project-board-closed-task.png) |
 
 
-### MoSCoW Prioritization
+### MoSCoW Prioritisation
 
-I've decomposed my Epics into User Stories for prioritizing and implementing them. Using this approach, I was able to apply "MoSCoW" prioritization and labels to my User Stories within the Issues tab.
+I've decomposed my Epics into User Stories for prioritising and implementing them. Using this approach, I was able to apply "MoSCoW" prioritisation and labels to my User Stories within the Issues tab.
 
 - **Must Have**: guaranteed to be delivered - required to Pass the project (*max ~60% of stories*)
 
@@ -382,7 +381,9 @@ By forking the GitHub Repository, you make a copy of the original repository on 
 
 ### Local VS Deployment
 
-There are no remaining major differences between the local version when compared to the deployed version online.
+There are are some differences when it came to local vs deployment using Heroku, such as displaying images. In order for images to be displayed whe deploying to Heroku, Cloudinary had to be installed to handle the display of images and manage the storage.
+
+Other than the above, there were no major differences between the two.
 
 
 ## Credits
@@ -391,10 +392,10 @@ There are no remaining major differences between the local version when compared
 | Source | Notes |
 | --- | --- |
 | [Interactive Frontend Development](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
-| [w3schools](https://www.w3schools.com/) | Help with form validation, display:block/none vs visibiliy: visible/hidden |
+| [w3schools](https://www.w3schools.com/) | Help with form validation, display:block/none vs visibility: visible/hidden |
 | [Bootstrap](https://getbootstrap.com) | Various components / responsive front-end framework |
 | [Django](https://django.com) | Various components such as forms, loops and reusable templates |
-| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations:<br>**Example 1**`Posted by {{ post.user.username }} on {{ post.created_at }}` <br>**Example 2** `(onsubmit="return confirm('Are you sure you want to delete this post? ‘)` <br>**Example 3**`<form method="POST" action="{% url 'toggle_like' post.id %}"> {% csrf_token %} <button type="submit" class="btn btn-link p-0 like-btn"> {% if user in post.likes.all %} <i class="bi bi-heart-fill text-danger"></i> {% else %} <i class="bi bi-heart"></i> {% endif %} </button> <span>{{ post.likes.count }}</span> </form>` |
+| [ChatGPT](https://chatgpt.com) | Help with code logic to enhance user experience:<br>**Example 1**`Posted by {{ post.user.username }} on {{ post.created_at }}` <br>**Example 2** `(onsubmit="return confirm('Are you sure you want to delete this post? ‘)` <br>**Example 3**`<form method="POST" action="{% url 'toggle_like' post.id %}"> {% csrf_token %} <button type="submit" class="btn btn-link p-0 like-btn"> {% if user in post.likes.all %} <i class="bi bi-heart-fill text-danger"></i> {% else %} <i class="bi bi-heart"></i> {% endif %} </button> <span>{{ post.likes.count }}</span> </form>` |
 
 ### Media
 - Image Compression
