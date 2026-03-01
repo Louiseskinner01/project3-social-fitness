@@ -47,16 +47,28 @@ margin-left: 100px;
 }
 
 footer{
-        padding-top: 10px;
         background-color: rgb(119, 119, 251);
         margin-top: 20px;
+        color: white;
+        font-size: larger;
+        padding: 10px;
 }
+
+
     
 
 main img {
-  width: 300px;
-  height: 350px;
+  max-width: 100%;
+  height: auto;
   display: block;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.post-image {
+  width: 450px;
+  height: 600px;
+  object-fit: cover;
   margin: auto;
   border-radius: 5px;
 }
@@ -93,12 +105,15 @@ main img {
 
 @media (min-width: 992px) {
   .large-screen {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1400px) {
   .large-screen {
-    font-size: 32px;
+    font-size: 22px;
+    margin: auto;
+    max-width: 50%;
+    color: red;
   }
 }

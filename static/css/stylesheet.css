@@ -54,9 +54,6 @@ footer{
         padding: 10px;
 }
 
-
-    
-
 main img {
   max-width: 100%;
   height: auto;
@@ -114,6 +111,6 @@ main img {
     font-size: 22px;
     margin: auto;
     max-width: 50%;
-    
+    color: red;
   }
 }
