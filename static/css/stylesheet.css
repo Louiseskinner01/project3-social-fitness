@@ -105,13 +105,12 @@ main img {
 
 @media (min-width: 992px) {
   .large-screen {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1400px) {
   .large-screen {
-    font-size: 32px;
-    margin: 0px 50px;
+    font-size: 26px;
   }
 }
