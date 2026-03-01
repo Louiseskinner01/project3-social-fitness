@@ -338,19 +338,42 @@ I've decomposed my Epics into User Stories for prioritising and implementing the
 
 ## Deployment
 
-### GitHub Pages
+### Heroku App
 
-The site was deployed to GitHub Pages. The steps to deploy are as follows:
+This project is deployed using Heroku, a cloud platform that supports full-stack Django applications with a PostgreSQL database.
 
-- In the [GitHub repository](https://www.github.com/Louiseskinner01/project3-social-fitness), navigate to the "Settings" tab.
-- In Settings, click on the "Pages" link from the menu on the left.
-- From the "Build and deployment" section, click the drop-down called "Branch", and select the main branch, then click "Save".
-- The page will be automatically refreshed with a detailed message display to indicate the successful deployment.
-- Allow up to 5 minutes for the site to fully deploy.
+The live application can be accessed here: https://social-fitness-330c9c90ea8f.herokuapp.com/ 
 
-The live link can be found on [GitHub Pages](https://louiseskinner01.github.io/project3-social-fitness).
+I have chosen this app because it supports server-side technologies and allows deployment of dynamic web applications with database integration.
+
+#### Deployment Process
+
+1. Created a Heroku app from the Heroku dashboard
+
+2. Attached a **Heroku Postgres** database to the app
+
+3. Set the following environment variables in **Heroku Config Vars**:
+   - `DATABASE_URL`
+   - `SECRET_KEY`
+   - `CLOUDINARY_URL`
+   - `DISABLE_COLLECTSTATIC=1` *(removed for the final deployment if applicable)*
+
+4. Installed the required production packages:
+   - `gunicorn`
+   - `dj-database-url`
+   - `psycopg2`
+
+5. Created a `Procfile` in the root directory:
+web: gunicorn project_name.wsgi
 
 
+6. Updated `ALLOWED_HOSTS` in `settings.py` to include the Heroku domain
+
+7. Deployed the application by pushing the code to Heroku via Git:
+git push heroku main
+
+8. Ran database migrations on the live Heroku database:
+heroku run python manage.py migrate
 ### Local Development
 
 This project can be cloned or forked in order to make a local copy on your own system.
