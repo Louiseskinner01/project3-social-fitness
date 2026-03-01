@@ -100,19 +100,20 @@ main img {
   border: 1px solid whitesmoke;
 }
 
+.large-screen {
+  margin: auto;
+  max-width: 75%;
+  color: blue;
+}
+
 @media (min-width: 992px) and (max-width: 1399px) {
   .large-screen {
     font-size: 20px;
-    margin: auto;
-    max-width: 75%;
-  }
+}
 }
 
 @media (min-width: 1400px) {
   .large-screen {
     font-size: 22px;
-    margin: auto;
-    max-width: 75%;
-    
   }
 }
