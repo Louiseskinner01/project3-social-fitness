@@ -9,72 +9,73 @@
 
 {% if posts %}
 {% for post in posts %}
+<div class="post mb-4">
 
-{% if post.image %}
-  {% cloudinary post.image width=500 crop="limit" class="post-image mb-3" alt=post.caption|default:"Post image" %}
-{% endif %}
+  {% if post.image %}
+    {% cloudinary post.image width=500 crop="limit" class="post-image mb-3" alt=post.caption|default:"Post image" %}
+  {% endif %}
 
   <small class="text-muted mt-2 mb-2">
     Posted by {{ post.user.username }} on {{ post.created_at }}
   </small>
-  <p class="mt-3"><strong>Caption: </strong>{{ post.caption }}</p>
+
+  <p class="mt-3"><strong>Caption:</strong> {{ post.caption }}</p>
   <p><strong>Workout:</strong> {{ post.workout }}</p>
   <p><strong>Intensity:</strong> {{ post.intensity }}</p>
 
   <p class="mb-3"><strong>Comments</strong></p>
   {% for comment in post.comments.all %}
-
-  <p>
-    <strong>{{ comment.user.username }}</strong>:
-    {{ comment.body }}
-    {% if comment.user == user %}
-    <a href="{% url 'comment_edit' comment.id %}">Edit</a>
-    {% endif %}
-  </p>
+    <p>
+      <strong>{{ comment.user.username }}</strong>: {{ comment.body }}
+      {% if comment.user == user %}
+        <a href="{% url 'comment_edit' comment.id %}">Edit</a>
+      {% endif %}
+    </p>
   {% empty %}
-
+    <p>No comments yet.</p>
   {% endfor %}
 
-
   {% if user.is_authenticated %}
-  <form method="POST" action="{% url 'add_comment' post.id %}">
-    {% csrf_token %}
-    <textarea name="body" rows="2" placeholder="Add a comment..." class="form-control" required></textarea>
-    <button type="submit" class="btn btn-primary mt-2 mb-3">Post</button>
-  </form>
+    <form method="POST" action="{% url 'add_comment' post.id %}">
+      {% csrf_token %}
+      <textarea name="body" rows="2" placeholder="Add a comment..." class="form-control" required></textarea>
+      <button type="submit" class="btn btn-primary mt-2 mb-3">Post</button>
+    </form>
   {% else %}
-  <p><a href="{% url 'account_login' %}">Log in</a> to comment.</p>
+    <p><a href="{% url 'account_login' %}">Log in</a> to comment.</p>
   {% endif %}
 
-  {# this is an example from ChatGPT to enable the user to like/unlike a comment #}
   {% if user.is_authenticated %}
-  <form method="POST" action="{% url 'toggle_like' post.id %}">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-link p-0 like-btn">
-      {% if user in post.likes.all %}
-        <i class="bi bi-heart-fill text-danger"></i> <!-- filled red heart -->
-      {% else %}
-        <i class="bi bi-heart text-muted"></i> <!-- grey outline heart -->
-      {% endif %}
-    </button>
-    <p><strong>{{ post.likes.count }}</strong> likes</p>
-  </form>
-  <hr>
+    <form method="POST" action="{% url 'toggle_like' post.id %}" class="like-form">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-link p-0 like-btn">
+        {% if post.likes.filter(user=request.user).exists %}
+          <i class="bi bi-heart-fill text-danger"></i> <!-- filled red heart -->
+        {% else %}
+          <i class="bi bi-heart text-muted"></i> <!-- grey outline heart -->
+        {% endif %}
+      </button>
+      <p><strong>{{ post.likes.count }}</strong> likes</p>
+    </form>
+    <hr>
   {% else %}
-  <p><a href="{% url 'account_login' %}">Log in</a> to like.</p>
+    <p><a href="{% url 'account_login' %}">Log in</a> to like.</p>
   {% endif %}
+
 </div>
 {% endfor %}
+{% else %}
+<p>No posts to display.</p>
 {% endif %}
 
 {% if is_paginated %}
 <nav aria-label="Page navigation">
   <ul class="pagination justify-content-center">
     {% if page_obj.has_previous %}
-    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREVIOUS </a></li>
+      <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREVIOUS</a></li>
     {% endif %}
     {% if page_obj.has_next %}
-    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+      <li><a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a></li>
     {% endif %}
   </ul>
 </nav>
