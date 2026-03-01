@@ -376,7 +376,39 @@ git push heroku main
 heroku run python manage.py migrate
 ### Local Development
 
-This project can be cloned or forked in order to make a local copy on your own system.
+To run this project locally:
+
+1. Clone the repository: https://www.github.com/Louiseskinner01/project3-social-fitness)
+
+2. Navigate into the project folder: cd social-fitness
+
+
+3. Create and activate a virtual environment:
+python -m venv venv
+source venv/bin/activate # Mac/Linux
+venv\Scripts\activate # Windows
+
+4. Install the project dependencies:
+pip install -r requirements.txt
+
+
+5. Create a `.env` file in the root directory and add the required environment variables:
+DATABASE_URL=your_database_url
+SECRET_KEY=your_secret_key
+CLOUDINARY_URL=your_cloudinary_url
+
+6. Apply database migrations:
+python manage.py migrate
+
+7. Create a superuser (optional for admin access):
+python manage.py createsuperuser
+
+8. Run the development server:
+python manage.py runserver
+
+The application will now be available at:  
+http://127.0.0.1:8000/
+
 
 #### Cloning
 
