@@ -112,5 +112,6 @@ main img {
 @media (min-width: 1400px) {
   .large-screen {
     font-size: 32px;
+    margin: 0px 50px;
   }
 }
