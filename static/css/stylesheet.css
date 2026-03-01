@@ -106,7 +106,6 @@ main img {
     font-size: 22px;
     margin: auto;
     max-width: 75%;
-    color: blue;
   }
 }
 
@@ -115,6 +114,5 @@ main img {
     font-size: 20px;
     margin: auto;
     max-width: 75%;
-    color: yellow;
 }
 }
