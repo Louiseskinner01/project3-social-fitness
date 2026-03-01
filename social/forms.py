@@ -21,14 +21,9 @@ class PostForm(forms.ModelForm):
     def clean(self):
         cleaned_data = super().clean()
         image = cleaned_data.get("image")
-        caption = cleaned_data.get("caption")
-        workout = cleaned_data.get("workout")
-        intensity = cleaned_data.get("intensity")
 
-        if not image and not caption and not workout and not intensity:
-            raise forms.ValidationError(
-                "Please add an image, caption, or workout details before posting."
-            )
+        if not image:
+            raise forms.ValidationError("You must upload an image.")
 
         return cleaned_data
 
