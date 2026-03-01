@@ -42,6 +42,10 @@ class Post(models.Model):
 
     def __str__(self):
         return f"Post {self.id} by {self.user.username}"
+        
+    def is_liked_by(self, user):
+        return self.likes.filter(user=user).exists()
+
 
 
 class Comment(models.Model):
