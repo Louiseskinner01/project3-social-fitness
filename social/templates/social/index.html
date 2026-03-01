@@ -51,7 +51,7 @@
   <form method="POST" action="{% url 'toggle_like' post.id %}">
     {% csrf_token %}
     <button type="submit" class="btn btn-link p-0 like-btn">
-      {% if user in post.is_liked_bu user %}
+      {% if post.user_has_liked %}
         <i class="bi bi-heart-fill text-danger"></i> <!-- filled red heart -->
       {% else %}
         <i class="bi bi-heart text-danger"></i> <!-- grey outline heart -->

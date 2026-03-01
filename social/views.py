@@ -38,7 +38,20 @@ class PostList(LoginRequiredMixin, ListView):
     ordering = ["-created_at"]
     paginate_by = 6
     login_url = "login"
+    # views.py inside PostList get_context_data() or in your profile/feed view
+    def get_context_data(self, **kwargs):
+        # Get default context
+        context = super().get_context_data(**kwargs)
 
+        # Add user_has_liked to each post
+        posts = context["posts"]
+        for post in posts:
+            if self.request.user.is_authenticated:
+                post.user_has_liked = post.likes.filter(user=self.request.user).exists()
+            else:
+                post.user_has_liked = False
+
+        return context
 
 @login_required
 def create_post(request):
