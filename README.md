@@ -384,16 +384,16 @@ To run this project locally:
 
 3. Create and activate a virtual environment:
 python -m venv venv
-- source venv/bin/activate # Mac/Linux
-- venv\Scripts\activate # Windows
+  - source venv/bin/activate # Mac/Linux
+  - venv\Scripts\activate # Windows
 
 4. Install the project dependencies:
 pip install -r requirements.txt
 
 5. Create a `.env` file in the root directory and add the required environment variables:
-- DATABASE_URL=your_database_url
-- SECRET_KEY=your_secret_key
-- CLOUDINARY_URL=your_cloudinary_url
+  - DATABASE_URL=your_database_url
+  - SECRET_KEY=your_secret_key
+  - CLOUDINARY_URL=your_cloudinary_url
 
 6. Apply database migrations:
 python manage.py migrate
