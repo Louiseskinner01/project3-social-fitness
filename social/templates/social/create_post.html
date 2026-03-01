@@ -5,25 +5,30 @@
 
   <form method="POST" enctype="multipart/form-data" class="create-post">
     {% csrf_token %}
+    {{ form.non_field_errors }}
 
     <div class="mb-3">
       <label class="form-label">Image: <small>Format must be JPEG or PNG</small></label>
       {{ form.image }}
+      {{ form.image.errors }}
     </div>
   
     <div class="mb-3">
       <label class="form-label">Caption</label>
        {{ form.caption }} 
+       {{ form.caption.errors }}
     </div>
 
     <div class="mb-3">
       <label class="form-label">Workout</label>
       {{ form.workout }}
+      {{ form.workout.errors }}
     </div>
   
     <div class="mb-3">
       <label class="form-label">Intensity</label>
        {{ form.intensity }} 
+       {{ form.intensity.errors }}
     </div>
     
     <button type="submit" class="btn btn-primary mb-3">Create Post</button>
