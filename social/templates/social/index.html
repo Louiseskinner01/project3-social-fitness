@@ -51,7 +51,7 @@
   <form method="POST" action="{% url 'toggle_like' post.id %}">
     {% csrf_token %}
     <button type="submit" class="btn btn-link p-0 like-btn">
-      {% if post.likes.filter(user=request.user).exists %}
+      {% if user in post.likes.all %}
         <i class="bi bi-heart-fill text-danger"></i> <!-- filled red heart -->
       {% else %}
         <i class="bi bi-heart text-muted"></i> <!-- grey outline heart -->
