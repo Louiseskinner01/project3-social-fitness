@@ -105,14 +105,15 @@ main img {
 
 @media (min-width: 992px) {
   .large-screen {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1400px) {
   .large-screen {
-    font-size: 20px;
+    font-size: 22px;
+    margin: auto;
     max-width: 50%;
-    color: #dc3545;
+    
   }
 }
