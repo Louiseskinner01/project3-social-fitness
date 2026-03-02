@@ -105,8 +105,8 @@ form {
 }
 
 .post-description {
-  background-color: whitesmoke;
-  border: 1px solid rgba(119, 119, 251, 0.279);
+  background-color: white;
+  border: 1px solid whitesmoke;
   border-radius: 2px;
 }
 
@@ -186,36 +186,8 @@ form {
 
 
 @media (max-width: 576px) {
-  
-  .login
-   {
-    width: 15rem;
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-
-  input#id_username,
-  input#id_password,
-  input#id_email,
-  input#id_password1,
-  input#id_password2 {
-    width: 250px;
-  }
-
-  label.form-label {
-    padding-right: 70%;
-  }
-
-  .login-container label,
-  .login-container input,
-  .signup-container label,
-  .auth-form label,
-  .signup-container input,
-  .signup-button
-  {
-    margin-left: -80px;
-  }
-  .login-button {
-    margin-left: -81px ;
-  }
-
- 
 }
