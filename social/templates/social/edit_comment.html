@@ -1,124 +1,35 @@
 {% extends "social/base.html" %}
+
 {% block content %}
 
-<!-- Page heading-->
+<!-- Page heading -->
 <h2 class="mb-3">Edit Comment</h2>
 
+<!-- Bootstrap container to align form with site layout -->
 <div class="container">
   <div class="row">
+    <!-- Full-width column -->
     <div class="col-12 mt-3 mb-3">
 
-      <!--
-        Form for editing an existing comment.
-        Uses POST to securely send updated data to the server.
-      -->
+      <!-- Form for editing an existing comment -->
       <form method="POST">
         {% csrf_token %}
 
-        <!--
-          Renders the Django form fields wrapped in <p> tags.
-          Includes:
-          - textarea/input for the comment body
-          - validation errors (if any)
-        -->
+        <!-- Render the form fields (textarea for comment body) with error messages -->
         {{ form.as_p }}
 
-        <!--
-          Action buttons:
-          - Save changes submits the form
-          - Cancel returns the user to the social feed without saving
-        -->
+        <!-- Action buttons -->
         <div class="d-flex gap-2 align-items-center">
+          <!-- Save changes button -->
           <button type="submit" class="btn btn-primary text-nowrap">Save changes</button>
-          <{% extends "social/base.html" %} {% block content %} <!-- Page heading -->
-            <h2 class="mb-3">Edit Comment</h2>
 
-            <!--
-  Bootstrap container used to keep the form aligned
-  consistently with the rest of the site layout.
--->
-            <div class="container">
-              <div class="row">
-                <!-- Full-width column on all screen sizes -->
-                <div class="col-12 mt-3 mb-3">
+          <!-- Cancel link returns user to the feed without saving -->
+          <a href="{% url 'feed' %}">Cancel</a>
+        </div>
+      </form>
 
-                  <!--
-        Form for editing an existing comment.
-        Uses POST to securely send updated data to the server.
-      -->
-                  <form method="POST">
+    </div>
+  </div>
+</div>
 
-                    <!-- CSRF token for security -->
-                    {% csrf_token %}
-
-                    <!--
-          Renders the Django form fields wrapped in <p> tags.
-          Includes:
-          - textarea/input for the comment body
-          - validation errors (if any)
-        -->
-                    {{ form.as_p }}
-
-                    <!--
-          Action buttons:
-          - Save changes submits the form
-          - Cancel returns the user to the social feed without saving
-        -->
-                    <div class="d-flex gap-2 align-items-center">
-                      <button type="submit" class="btn btn-primary text-nowrap">
-                        Save changes
-                      </button>
-
-                      {% extends "social/base.html" %}
-
-                      {% block content %}
-
-                      <!-- Page heading -->
-                      <h2 class="mb-3">Edit Comment</h2>
-
-                      <!--
-  Bootstrap container used to keep the form aligned
-  consistently with the rest of the site layout.
--->
-                      <div class="container">
-                        <div class="row">
-                          <!-- Full-width column on all screen sizes -->
-                          <div class="col-12 mt-3 mb-3">
-
-                            <!--
-        Form for editing an existing comment.
-        Uses POST to securely send updated data to the server.
-      -->
-                            <form method="POST">
-
-                              <!-- CSRF token for security -->
-                              {% csrf_token %}
-
-                              <!--
-          Renders the Django form fields wrapped in <p> tags.
-          Includes:
-          - textarea/input for the comment body
-          - validation errors (if any)
-        -->
-                              {{ form.as_p }}
-
-                              <!--
-          Action buttons:
-          - Save changes submits the form
-          - Cancel returns the user to the social feed without saving
-        -->
-                              <div class="d-flex gap-2 align-items-center">
-                                <button type="submit" class="btn btn-primary text-nowrap">
-                                  Save changes
-                                </button>
-
-                                <!-- Cancel link navigates back to the social feed page  -->
-                                <a href="{% url 'feed' %}">Cancel</a>
-                              </div>
-                            </form>
-
-                          </div>
-                        </div>
-                      </div>
-
-                      {% endblock %}
+{% endblock %}
