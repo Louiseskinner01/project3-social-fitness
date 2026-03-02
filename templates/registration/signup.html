@@ -1,44 +1,56 @@
 {% extends "social/base.html" %}
 
 {% block content %}
-    <h2 class="mb-3">Create an account</h2>
+<!-- Page heading -->
+<h2 class="mb-3">Create an account</h2>
 
-    <div class="container">
-      <div class="row justify-content-center signup-container">
-        <div class="col-3 col-xl-2 me-5 mt-3 mb-3">
-    <form method="POST" class="auth-form signup">
+<!-- Container for the signup form -->
+<div class="container">
+  <div class="row justify-content-center signup-container">
+    <div class="col-3 col-xl-2 me-5 mt-3 mb-3">
+      <!-- Signup form -->
+      <form method="POST" class="auth-form signup">
         {% csrf_token %}
+        <!-- Display any non-field errors from the form (e.g., passwords do not match) -->
         {{ form.non_field_errors }}
-        
+
+        <!-- Username field -->
         <div class="mb-3">
-            <label class="form-label text-black fs-4">Username</label>
-             {{ form.username }} 
-             {{ form.username.errors }}
-          </div> 
+          <label class="form-label text-black fs-4">Username</label>
+          {{ form.username }}
+          <!-- Display any validation errors for the username field -->
+          {{ form.username.errors }}
+        </div>
 
-          <div class="mb-3">
-            <label class="form-label text-black fs-4">Email</label>
-             {{ form.email }} 
-             {{ form.email.errors }}
-          </div> 
-          
-          <div class="mb-3">
-            <label class="form-label text-black fs-4">Password</label>
-             {{ form.password1 }} 
-             {{ form.password1.errors }}
-          </div> 
-           
-          <div class="mb-3">
-            <label class="form-label text-black fs-4">Re-enter password</label>
-             {{ form.password2 }} 
-             {{ form.password2.errors }}
-          </div> 
+        <!-- Email field -->
+        <div class="mb-3">
+          <label class="form-label text-black fs-4">Email</label>
+          {{ form.email }}
+          <!-- Display any validation errors for the email field -->
+          {{ form.email.errors }}
+        </div>
 
+        <!-- Password field -->
+        <div class="mb-3">
+          <label class="form-label text-black fs-4">Password</label>
+          {{ form.password1 }}
+          <!-- Display any validation errors for the password field -->
+          {{ form.password1.errors }}
+        </div>
 
+        <!-- Password confirmation field -->
+        <div class="mb-3">
+          <label class="form-label text-black fs-4">Re-enter password</label>
+          {{ form.password2 }}
+          <!-- Display any validation errors for the password confirmation -->
+          {{ form.password2.errors }}
+        </div>
+
+        <!-- Submit button -->
         <button type="submit" class="btn btn-primary text-nowrap signup-button">Sign Up</button>
 
-    </form>
-</div>
-</div>
+      </form>
+    </div>
+  </div>
 </div>
 {% endblock%}

@@ -1,36 +1,48 @@
 {% extends "social/base.html" %}
 
 {% block content %}
-  <h2 class="mb-5">Create Post</h2>
+<!-- Page heading -->
+<h2 class="mb-5">Create Post</h2>
 
-  <form method="POST" enctype="multipart/form-data" class="create-post">
-    {% csrf_token %}
-    {{ form.non_field_errors }}
+<!--
+    Form for creating a new post -->
+<form method="POST" enctype="multipart/form-data" class="create-post">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
 
-    <div class="mb-3">
-      <label class="form-label text-black fs-4">Image: <small>Format must be JPEG or PNG</small></label>
-      {{ form.image }}
-      {{ form.image.errors }}
-    </div>
+  <!-- Displays any non-field form errors (e.g. validation failures) -->
+  <div class="mb-3">
+    <!-- Label with guidance on accepted file formats -->
+    <label class="form-label text-black fs-4">Image: <small>Format must be JPEG or PNG</small></label>
+
+    <!-- Image upload input rendered from Django form -->
+    {{ form.image }}
+    <!-- Field-specific validation errors -->
+    {{ form.image.errors }}
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label text-black fs-4">Caption</label>
+    <!-- Text input/textarea for post caption -->
+    {{ form.caption }}
+    {{ form.caption.errors }}
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label text-black fs-4">Workout</label>
+    <!-- Workout type selection (drop down choices) -->
+    {{ form.workout }}
+    {{ form.workout.errors }}
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label text-black fs-4">Intensity</label>
+    <!-- Intensity selection (e.g. Low, Medium, High) -->
+    {{ form.intensity }}
+    {{ form.intensity.errors }}
+  </div>
   
-    <div class="mb-3">
-      <label class="form-label text-black fs-4">Caption</label>
-       {{ form.caption }} 
-       {{ form.caption.errors }}
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label text-black fs-4">Workout</label>
-      {{ form.workout }}
-      {{ form.workout.errors }}
-    </div>
-  
-    <div class="mb-3">
-      <label class="form-label text-black fs-4">Intensity</label>
-       {{ form.intensity }} 
-       {{ form.intensity.errors }}
-    </div>
-    
-    <button type="submit" class="btn btn-primary mb-3">Create Post</button>
-  </form>
+  <!-- Submit button to create the post -->
+  <button type="submit" class="btn btn-primary mb-3">Create Post</button>
+</form>
 {% endblock %}

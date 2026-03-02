@@ -2,18 +2,19 @@
 
 {% block content %}
 
-
+<!-- Page heading -->
 <h2 class="mb-3">404 Error</h2>
 
-<p class="large-screen">Sorry it seems that the page you are looking for can't be found, please return to the main page.</p>
+<p class="large-screen">Sorry it seems that the page you are looking for can't be found, please return to the main page.
+</p>
 
+<!-- Link user back to social feed is they are authenticated -->
 {% if user.is_authenticated %}
 <p class="large-screen"><a class="nav-link" href="{% url 'feed' %}">Social Feed</a></p>
 {% else %}
+<!-- Link user back to home page if they are not logged in -->
 <p class="large-screen"><a class="nav-link" href="{% url 'landing' %}">Home</a></p>
 
 {% endif %}
 
 {% endblock %}
-
-

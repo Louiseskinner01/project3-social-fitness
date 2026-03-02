@@ -30,8 +30,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-local-dev-key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["localhost", 
-                 "127.0.0.1", 
+ALLOWED_HOSTS = ["localhost",
+                 "127.0.0.1",
                  ".herokuapp.com",
                  "*",]
 
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cloudinary_storage',  
+    'cloudinary_storage',
     'cloudinary',
     'social',
     'django_summernote'
@@ -132,7 +132,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-#STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -147,5 +147,5 @@ if "DATABASE_URL" in os.environ:
 
 # Authentication redirects
 LOGIN_REDIRECT_URL = "/feed/"       # on login user is directed to feed
-LOGOUT_REDIRECT_URL = "/"           # after logout user is directed to the landing page
-
+# after logout user is directed to the landing page
+LOGOUT_REDIRECT_URL = "/"

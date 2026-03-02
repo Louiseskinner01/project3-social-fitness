@@ -1,32 +1,41 @@
 {% extends "social/base.html" %}
 
 {% block content %}
-  <h2 class="mb-3">Log in</h2>
+<!-- Page heading -->
+<h2 class="mb-3">Log in</h2>
 
-  <div class="container">
-    <div class="row justify-content-center login-container ms-auto ps-5">
-      <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 mt-3 mb-3">
+<!-- Container for the login form -->
+<div class="container">
+  <div class="row justify-content-center login-container ms-auto ps-5">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 mt-3 mb-3">
 
-  <form method="post" class="login">
-    {% csrf_token %}
-    {{ form.non_field_errors }}
+      <!-- Login form -->
+      <form method="post" class="login">
+        {% csrf_token %}
+        <!-- Display any non-field errors from the form (e.g., invalid login) -->
+        {{ form.non_field_errors }}
 
-    <div class="mb-3">
-      <label class="form-label text-black fs-4">Username</label>
-       {{ form.username }} 
-       {{ form.username.errors }}
-    </div> 
+        <!-- Username input -->
+        <div class="mb-3">
+          <label class="form-label text-black fs-4">Username</label>
+          {{ form.username }}
+          <!-- Display any validation errors for the username field -->
+          {{ form.username.errors }}
+        </div>
 
-    <div class="mb-3">
-      <label class="form-label text-black fs-4 ">Password</label>
-       {{ form.password }} 
-       {{ form.password.errors }}
-    </div>  
+        <!-- Password input -->
+        <div class="mb-3">
+          <label class="form-label text-black fs-4 ">Password</label>
+          {{ form.password }}
+          <!-- Display any validation errors for the password field -->
+          {{ form.password.errors }}
+        </div>
 
-    <button type="submit" class="btn btn-primary text-nowrap login-button">Log in</button>
-  </form>
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary text-nowrap login-button">Log in</button>
+      </form>
 
-      </div>
     </div>
-    </div>
+  </div>
+</div>
 {% endblock %}
