@@ -105,7 +105,9 @@ form {
 }
 
 .post-description {
-  background-color: rgb(245, 241, 241);
+  background-color: whitesmoke;
+  border: 1px solid rgba(119, 119, 251, 0.279);
+  border-radius: 2px;
 }
 
 @media (min-width: 1400px) {
