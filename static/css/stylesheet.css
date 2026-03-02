@@ -182,8 +182,36 @@ form {
   }
 }
 
-@media (min-width: 576px) {
-  .large-screen {
-    margin: 0 50px;
+
+@media (max-width: 576px) {
+  
+  .login
+   {
+    width: 9rem;
+  }
+
+  input#id_username,
+  input#id_password,
+  input#id_email,
+  input#id_password1,
+  input#id_password2 {
+    width: 50px;
+  }
+
+  label.form-label {
+    padding-right: 70%;
+  }
+
+  .login-container label,
+  .login-container input,
+  .signup-container label,
+  .auth-form label,
+  .signup-container input,
+  .signup-button
+  {
+    margin-left: -80px;
+  }
+  .login-button {
+    margin-left: -81px ;
   }
 }
