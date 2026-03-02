@@ -187,7 +187,7 @@ form {
   
   .login
    {
-    width: 9rem;
+    width: 15rem;
   }
 
   input#id_username,
@@ -195,7 +195,7 @@ form {
   input#id_email,
   input#id_password1,
   input#id_password2 {
-    width: 50px;
+    width: 250px;
   }
 
   label.form-label {
@@ -214,4 +214,6 @@ form {
   .login-button {
     margin-left: -81px ;
   }
+
+ 
 }
