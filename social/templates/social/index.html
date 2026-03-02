@@ -21,11 +21,11 @@
   <p><small class="post-description">Workout Type:</small> {{ post.workout }}</p>
   <p><small class="post-description">Intensity Level:</small> {{ post.intensity }}</p>
 
-  <p class="mb-3"><strong>Comments</strong></p>
+  <p class="mb-1 mt-4"><strong>Comments</strong></p>
   {% for comment in post.comments.all %}
 
   <p>
-    <small class="fs-4">{{ comment.user.username }}</small>:
+    <small class="fs-6">{{ comment.user.username }}</small>:
     {{ comment.body }}
     {% if comment.user == user %}
     <a href="{% url 'comment_edit' comment.id %}">Edit</a>
