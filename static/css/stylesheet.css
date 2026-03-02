@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 :root {
-   --main-font: "Zalando Sans Expanded", sans-serif;
-   --secondary-font: "Poiret One", sans-serif;
+  --main-font: "Zalando Sans Expanded", sans-serif;
+  --secondary-font: "Poiret One", sans-serif;
 }
 
-body{
+body {
   background-color: rgba(250, 238, 250, 0.156);
   padding: 0;
   min-height: 100vh;
@@ -14,44 +14,48 @@ body{
   flex-direction: column;
 }
 
-h1, h2{
+h1,
+h2 {
   color: rgb(119, 119, 251);
   text-align: center;
   font-size: 36px;
   margin: 30px 0px;
 }
 
-h1, h2, h5, p {
+h1,
+h2,
+h5,
+p {
   font-family: var(--main-font);
 }
 
-main{
-    margin: 30px auto;
-    width: 500px;
-    border-radius: 10px;
-    border: 1px rgba(11, 11, 11, 0.264) solid;
-    flex: 1; 
+main {
+  margin: 30px auto;
+  width: 500px;
+  border-radius: 10px;
+  border: 1px rgba(11, 11, 11, 0.264) solid;
+  flex: 1;
 }
 
 
-nav{
-    width: 100%;
-    margin-left: 100px;
+nav {
+  width: 100%;
+  margin-left: 100px;
 }
 
-nav a{
-text-decoration: none;
-border: 1px solid whitesmoke;
-padding: 5px;
-margin-left: 100px;
+nav a {
+  text-decoration: none;
+  border: 1px solid whitesmoke;
+  padding: 5px;
+  margin-left: 100px;
 }
 
-footer{
-        background-color: rgb(119, 119, 251);
-        margin-top: 20px;
-        color: white;
-        font-size: larger;
-        padding: 10px;
+footer {
+  background-color: rgb(119, 119, 251);
+  margin-top: 20px;
+  color: white;
+  font-size: larger;
+  padding: 10px;
 }
 
 main img {
@@ -70,7 +74,8 @@ main img {
   border-radius: 5px;
 }
 
- label, form {
+label,
+form {
   font-family: var(--secondary-font);
 }
 
@@ -87,7 +92,6 @@ main img {
   transition: transform 0.15s ease;
   color: #dc3545;
   font-weight: 800;
-
 }
 
 .like-btn:hover i {
@@ -102,23 +106,80 @@ main img {
 
 @media (min-width: 1400px) {
   .large-screen {
-    font-size: 22px;
+    font-size: 20px;
     margin: auto;
-    max-width: 75%;
+  }
+  .login
+   {
+    width: 40em;
+  }
+
+  input#id_username,
+  input#id_password,
+  input#id_email,
+  input#id_password1,
+  input#id_password2 {
+    width: 350px;
+  }
+
+  label.form-label {
+    padding-right: 70%;
+  }
+
+  .login-container label,
+  .login-container input,
+  .signup-container label,
+  .auth-form label,
+  .signup-container input,
+  .signup-button
+  {
+    margin-left: -80px;
+  }
+  .login-button {
+    margin-left: -81px ;
   }
 }
 
+
 @media (min-width: 992px) and (max-width: 1399px) {
   .large-screen {
-    font-size: 20px;
+    font-size: 18px;
     margin: auto;
-    max-width: 75%;
-}
+  }
+
+  .login
+   {
+    width: 40em;
+  }
+
+  input#id_username,
+  input#id_password,
+  input#id_email,
+  input#id_password1,
+  input#id_password2 {
+    width: 350px;
+  }
+
+  label.form-label {
+    padding-right: 70%;
+  }
+
+  .login-container label,
+  .login-container input,
+  .signup-container label,
+  .auth-form label,
+  .signup-container input,
+  .signup-button
+  {
+    margin-left: -80px;
+  }
+  .login-button {
+    margin-left: -81px ;
+  }
 }
 
-@media (min-width: 597px) {
+@media (min-width: 576px) {
   .large-screen {
-    margin: auto;
-    max-width: 50%;
-}
+    margin: 0 50px;
+  }
 }

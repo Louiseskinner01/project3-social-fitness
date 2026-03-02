@@ -4,38 +4,38 @@
     <h2>Create an account</h2>
 
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center signup-container">
         <div class="col-3 col-xl-2 mt-3 mb-3">
-    <form method="POST" class="auth-form">
+    <form method="POST" class="auth-form signup">
         {% csrf_token %}
         {{ form.non_field_errors }}
         
         <div class="mb-3">
-            <label class="form-label">Username</label>
+            <label class="form-label text-black fs-4">Username</label>
              {{ form.username }} 
              {{ form.username.errors }}
           </div> 
 
           <div class="mb-3">
-            <label class="form-label">Email</label>
+            <label class="form-label text-black fs-4">Email</label>
              {{ form.email }} 
              {{ form.email.errors }}
           </div> 
           
           <div class="mb-3">
-            <label class="form-label">Password</label>
+            <label class="form-label text-black fs-4">Password</label>
              {{ form.password1 }} 
              {{ form.password1.errors }}
           </div> 
            
           <div class="mb-3">
-            <label class="form-label">Re-enter password</label>
+            <label class="form-label text-black fs-4">Re-enter password</label>
              {{ form.password2 }} 
              {{ form.password2.errors }}
           </div> 
 
 
-        <button type="submit" class="btn btn-primary text-nowrap">Sign Up</button>
+        <button type="submit" class="btn btn-primary text-nowrap signup-button">Sign Up</button>
 
     </form>
 </div>
