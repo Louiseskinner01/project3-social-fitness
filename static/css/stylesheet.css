@@ -111,10 +111,29 @@ form {
   padding: 6px;
 }
 
+@media (min-width: 2560px) {
+  .large-screen {
+    font-size: 24px;
+  }
+
+  .login {
+    width: 60em;
+  }
+
+  input#id_username,
+  input#id_password,
+  input#id_email,
+  input#id_password1,
+  input#id_password2 {
+    width: 650px;
+  }
+}
+
+
+
 @media (min-width: 1400px) {
   .large-screen {
     font-size: 20px;
-    margin: auto;
   }
 
   .login {
@@ -126,11 +145,12 @@ form {
   input#id_email,
   input#id_password1,
   input#id_password2 {
-    width: 350px;
+    width: 550px;
   }
 
   label.form-label {
-    padding-right: 70%;
+    padding-right: 30%;
+    margin: auto;
   }
 
   .login-container label,
