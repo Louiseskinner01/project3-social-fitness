@@ -1,11 +1,11 @@
 {% extends "social/base.html" %}
 
 {% block content %}
-    <h2>Create an account</h2>
+    <h2 class="mb-3">Create an account</h2>
 
     <div class="container">
       <div class="row justify-content-center signup-container">
-        <div class="col-3 col-xl-2 me-4 mt-3 mb-3">
+        <div class="col-3 col-xl-2 me-5 mt-3 mb-3">
     <form method="POST" class="auth-form signup">
         {% csrf_token %}
         {{ form.non_field_errors }}
