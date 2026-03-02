@@ -17,15 +17,15 @@
   <small class="text-muted mt-2 mb-2">
     Posted by {{ post.user.username }} on {{ post.created_at }}
   </small>
-  <p class="mt-3"><strong>Caption: </strong>{{ post.caption }}</p>
-  <p><strong>Workout:</strong> {{ post.workout }}</p>
-  <p><strong>Intensity:</strong> {{ post.intensity }}</p>
+  <p class="mt-3"><small class="post-description">Caption: </small>{{ post.caption }}</p>
+  <p><small class="post-description">Workout:</small> {{ post.workout }}</p>
+  <p><small class="post-description">Intensity:</small> {{ post.intensity }}</p>
 
   <p class="mb-3"><strong>Comments</strong></p>
   {% for comment in post.comments.all %}
 
   <p>
-    <strong>{{ comment.user.username }}</strong>:
+    <small>{{ comment.user.username }}</small>:
     {{ comment.body }}
     {% if comment.user == user %}
     <a href="{% url 'comment_edit' comment.id %}">Edit</a>

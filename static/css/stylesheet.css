@@ -104,6 +104,10 @@ form {
   border: 1px solid whitesmoke;
 }
 
+.post-description {
+  background-color: rgb(245, 241, 241);
+}
+
 @media (min-width: 1400px) {
   .large-screen {
     font-size: 20px;
